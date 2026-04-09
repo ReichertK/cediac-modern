@@ -13,7 +13,7 @@ const sucursales = [
   {
     name: "Berazategui — Calle 7",
     address: "Calle 7 entre 147 y 148, Berazategui, Prov. de Buenos Aires",
-    image: "/images/FRENTE-C7.jpg",
+    image: `${import.meta.env.BASE_URL}images/FRENTE-C7.jpg`,
     imageAlt: "Fachada de la sucursal CEDIAC Berazategui Calle 7",
     description:
       "Centro de imágenes y kinesiología. Contamos con profesionales especializados en el tratamiento de lesiones y afecciones musculoesqueléticas, y equipos de última generación para diagnóstico por imágenes.",
@@ -44,7 +44,7 @@ const sucursales = [
   {
     name: "Quilmes — Humberto Primo",
     address: "Humberto Primo 343, Quilmes, Prov. de Buenos Aires",
-    image: "/images/H3.jpg",
+    image: `${import.meta.env.BASE_URL}images/H3.jpg`,
     imageAlt: "Fachada de la sucursal CEDIAC Quilmes Humberto Primo 343",
     description:
       "Centro de imágenes con equipos de última generación y un equipo de profesionales altamente calificados. Contamos con especialistas en la atención de pacientes con discapacidades para un servicio más inclusivo y accesible.",

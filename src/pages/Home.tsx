@@ -82,7 +82,7 @@ export default function Home() {
         {/* Background image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/pxfuel.jpg')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/pxfuel.jpg')` }}
         >
           <div className="absolute inset-0 bg-primary-900/70" />
         </div>

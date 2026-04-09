@@ -20,7 +20,7 @@ const services = [
     subtitle: "Resonador abierto GE Profile V",
     description:
       "Equipo abierto de alto campo que brinda máxima comodidad al paciente, ideal para quienes sufren claustrofobia. Permite estudios neurológicos, musculoesqueléticos, abdominales y articulares con excelente definición de imagen.",
-    image: "/images/reso.jpg",
+    image: `${import.meta.env.BASE_URL}images/reso.jpg`,
     link: "/equipos",
     linkLabel: "Ver equipamiento",
   },
@@ -31,7 +31,7 @@ const services = [
     subtitle: "Toshiba Activion 16 cortes",
     description:
       "Tomógrafo multislice de última generación con baja dosis de radiación. Realiza estudios de cráneo, tórax, abdomen, columna y articulaciones con reconstrucciones 3D de alta precisión.",
-    image: "/images/TOMOGRAFO-C7.jpg",
+    image: `${import.meta.env.BASE_URL}images/TOMOGRAFO-C7.jpg`,
     link: "/equipos",
     linkLabel: "Ver equipamiento",
   },
@@ -42,7 +42,7 @@ const services = [
     subtitle: "Ecografía general, obstétrica y Doppler",
     description:
       "Ecografía general, obstétrica, Doppler vascular, scan fetal y musculoesquelética con equipos de alta resolución. Incluye ecografía transvaginal, tiroidea, de partes blandas y articular.",
-    image: "/images/ECOGRAFIA-H1.jpg",
+    image: `${import.meta.env.BASE_URL}images/ECOGRAFIA-H1.jpg`,
     link: "/equipos",
     linkLabel: "Ver equipamiento",
   },
@@ -53,7 +53,7 @@ const services = [
     subtitle: "SENOGRAPHE DMR de GE Healthcare",
     description:
       "Mamografía digital directa con la mejor calidad de imagen para detección temprana del cáncer de mama. Sistema de alta resolución que minimiza la dosis de radiación y maximiza el contraste.",
-    image: "/images/MAMOGRAFIA-C7.jpg",
+    image: `${import.meta.env.BASE_URL}images/MAMOGRAFIA-C7.jpg`,
     link: "/equipos",
     linkLabel: "Ver equipamiento",
   },
@@ -64,7 +64,7 @@ const services = [
     subtitle: "Equipo Dinan AF-500",
     description:
       "Radiología digital convencional, panorámicas dentales y teleradiografías. Equipo de última generación para radiología general con mesa basculante de tres movimientos y seriógrafo.",
-    image: "/images/RX-H1-1.jpg",
+    image: `${import.meta.env.BASE_URL}images/RX-H1-1.jpg`,
     link: "/equipos",
     linkLabel: "Ver equipamiento",
   },
@@ -75,7 +75,7 @@ const services = [
     subtitle: "12 consultorios · Gimnasio · Sala RPG",
     description:
       "Centro de rehabilitación integral con ultrasonido terapéutico, láser, TENS, acupuntura láser, calor infrarrojo, crioterapia y kinesiotaping. Tratamos artralgias, lesiones musculares, discopatías, RPG y reumatología.",
-    image: "/images/kineiooo.jpg",
+    image: `${import.meta.env.BASE_URL}images/kineiooo.jpg`,
     link: "/kinesiologia",
     linkLabel: "Conocer más",
   },

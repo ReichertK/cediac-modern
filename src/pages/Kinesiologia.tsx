@@ -22,21 +22,21 @@ const areas = [
     title: "Artralgias, Artrosis y Artritis",
     description:
       "Rehabilitación de artralgias en general, artrosis y artritis. Abordaje integral para mejorar la movilidad articular y reducir el dolor.",
-    image: "/images/20220527_114951.jpg",
+    image: `${import.meta.env.BASE_URL}images/20220527_114951.jpg`,
   },
   {
     icon: PersonStanding,
     title: "RPG — Reeducación Postural Global",
     description:
       "Corrección de alteraciones del raquis en pacientes mayores de 18 años: rectificaciones, cifosis, lordosis y escoliosis mediante posturas activas.",
-    image: "/images/boxs.jpeg",
+    image: `${import.meta.env.BASE_URL}images/boxs.jpeg`,
   },
   {
     icon: Dumbbell,
     title: "Lesiones Musculares y Articulares",
     description:
       "Recuperación de lesiones musculares y articulares, alteraciones del eje de miembros en caderas, rodillas y pies. Gimnasia terapéutica y neurodesarrollo.",
-    image: "/images/WhatsApp-Image-2022-10-27-at-12.59.09-(2).jpeg",
+    image: `${import.meta.env.BASE_URL}images/WhatsApp-Image-2022-10-27-at-12.59.09-(2).jpeg`,
   },
   {
     icon: Zap,
@@ -71,16 +71,16 @@ const areas = [
     title: "Reumatología",
     description:
       "Rehabilitación de patologías reumatológicas en pacientes mayores de 18 años, buscando mejorar la funcionalidad y calidad de vida.",
-    image: "/images/20220527_114609.jpg",
+    image: `${import.meta.env.BASE_URL}images/20220527_114609.jpg`,
   },
 ];
 
 const carouselSlides = [
-  { src: "/images/boxs.jpeg", caption: "Boxes de kinesiología equipados" },
-  { src: "/images/20220527_114951.jpg", caption: "Gimnasio terapéutico" },
-  { src: "/images/WhatsApp-Image-2022-10-27-at-12.59.09-(2).jpeg", caption: "Sala de rehabilitación" },
-  { src: "/images/20220527_114609.jpg", caption: "Sala de RPG" },
-  { src: "/images/sala-espera-h1.jpg", caption: "Sala de espera" },
+  { src: `${import.meta.env.BASE_URL}images/boxs.jpeg`, caption: "Boxes de kinesiología equipados" },
+  { src: `${import.meta.env.BASE_URL}images/20220527_114951.jpg`, caption: "Gimnasio terapéutico" },
+  { src: `${import.meta.env.BASE_URL}images/WhatsApp-Image-2022-10-27-at-12.59.09-(2).jpeg`, caption: "Sala de rehabilitación" },
+  { src: `${import.meta.env.BASE_URL}images/20220527_114609.jpg`, caption: "Sala de RPG" },
+  { src: `${import.meta.env.BASE_URL}images/sala-espera-h1.jpg`, caption: "Sala de espera" },
 ];
 
 const instalaciones = [
@@ -133,7 +133,7 @@ export default function Kinesiologia() {
           className="absolute inset-0 scale-110 bg-cover bg-center"
         >
           <img
-            src="/images/kineiooo.jpg"
+            src={`${import.meta.env.BASE_URL}images/kineiooo.jpg`}
             alt="Centro de kinesiología CEDIAC"
             className="h-full w-full object-cover"
           />

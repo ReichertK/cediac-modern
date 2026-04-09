@@ -54,7 +54,7 @@ export default function Nosotros() {
       <section className="relative overflow-hidden bg-primary-800 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/FRENTE-C7.jpg')" }}
+          style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/FRENTE-C7.jpg')` }}
         >
           <div className="absolute inset-0 bg-primary-900/75" />
         </div>

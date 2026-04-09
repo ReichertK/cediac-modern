@@ -19,7 +19,7 @@ const equipment: Equipment[] = [
     name: "Tomógrafo Toshiba Activion",
     model: "Multislice — 16 cortes",
     category: "Tomografía Computada",
-    image: "/images/TOMOGRAFO-C7.jpg",
+    image: `${import.meta.env.BASE_URL}images/TOMOGRAFO-C7.jpg`,
     alt: "Tomógrafo Toshiba Activion multislice de 16 cortes en sala de estudios de CEDIAC",
     features: [
       "Adquisición helicoidal continua",
@@ -35,7 +35,7 @@ const equipment: Equipment[] = [
     name: "Mamógrafo SENOGRAPHE DMR",
     model: "Digital de Alta Frecuencia",
     category: "Mamografía",
-    image: "/images/MAMOGRAFIA-C7.jpg",
+    image: `${import.meta.env.BASE_URL}images/MAMOGRAFIA-C7.jpg`,
     alt: "Mamógrafo SENOGRAPHE DMR digital de alta frecuencia en sala de mamografía de CEDIAC",
     features: [
       "Bajas dosis para la paciente",
@@ -51,7 +51,7 @@ const equipment: Equipment[] = [
     name: "Resonador General Electric Profile V",
     model: "Resonancia Magnética — Resonador abierto",
     category: "Resonancia Magnética",
-    image: "/images/reso.jpg",
+    image: `${import.meta.env.BASE_URL}images/reso.jpg`,
     alt: "Resonador magnético General Electric Profile V de diseño abierto en sala de resonancia de CEDIAC",
     features: [
       "Alto campo magnético para máxima definición",
@@ -67,7 +67,7 @@ const equipment: Equipment[] = [
     name: "Generador Dinan AF-500",
     model: "Rayos X de Alta Frecuencia (IGBT)",
     category: "Radiología Digital",
-    image: "/images/RX-H1-1.jpg",
+    image: `${import.meta.env.BASE_URL}images/RX-H1-1.jpg`,
     alt: "Generador de rayos X Dinan AF-500 de alta frecuencia en sala de radiología de CEDIAC",
     features: [
       "Frecuencia de trabajo de 30 KHz",
