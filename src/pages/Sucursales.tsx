@@ -86,8 +86,14 @@ export default function Sucursales() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-to-br from-primary-700 via-primary-600 to-primary-800 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
+      <section className="relative overflow-hidden bg-primary-800 text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.pexels.com/photos/668300/pexels-photo-668300.jpeg?auto=compress&cs=tinysrgb&w=1920')" }}
+        >
+          <div className="absolute inset-0 bg-primary-900/75" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
