@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Sucursales from "./pages/Sucursales";
 import Equipos from "./pages/Equipos";
@@ -9,10 +10,13 @@ import Kinesiologia from "./pages/Kinesiologia";
 import Nosotros from "./pages/Nosotros";
 import Faq from "./pages/Faq";
 import Servicios from "./pages/Servicios";
+import Coberturas from "./pages/Coberturas";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Toaster richColors position="top-right" />
       <Routes>
         <Route element={<Layout />}>
@@ -23,7 +27,9 @@ export default function App() {
           <Route path="contacto" element={<Contacto />} />
           <Route path="kinesiologia" element={<Kinesiologia />} />
           <Route path="nosotros" element={<Nosotros />} />
+          <Route path="coberturas" element={<Coberturas />} />
           <Route path="faq" element={<Faq />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>

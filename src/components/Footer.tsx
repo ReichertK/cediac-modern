@@ -5,6 +5,7 @@ const quickLinks = [
   { to: "/nosotros", label: "Nosotros" },
   { to: "/servicios", label: "Servicios" },
   { to: "/equipos", label: "Equipos" },
+  { to: "/coberturas", label: "Coberturas" },
   { to: "/kinesiologia", label: "Kinesiología" },
   { to: "/sucursales", label: "Sucursales" },
   { to: "/contacto", label: "Contacto" },
@@ -94,6 +95,22 @@ export default function Footer() {
                 <span>Lun a Vie: 8:00 – 20:00</span>
               </li>
             </ul>
+            <div className="mt-5 flex items-center gap-3">
+              <a
+                href="#"
+                aria-label="Instagram de CEDIAC"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-700 text-gray-300 hover:bg-accent-500 hover:text-white transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Facebook de CEDIAC"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-700 text-gray-300 hover:bg-accent-500 hover:text-white transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 

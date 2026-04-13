@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Cpu,
   ShieldCheck,
@@ -6,6 +7,7 @@ import {
   Users,
   Target,
   Eye,
+  CalendarCheck,
 } from "lucide-react";
 
 
@@ -209,6 +211,26 @@ export default function Nosotros() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="bg-primary-500 py-14 text-center text-white">
+        <div className="mx-auto max-w-3xl px-4">
+          <CalendarCheck size={40} className="mx-auto mb-4 text-white/80" />
+          <h2 className="text-2xl font-bold sm:text-3xl">
+            Agendar un turno hoy mismo
+          </h2>
+          <p className="mt-3 text-primary-100">
+            Nuestro equipo está listo para atenderte. Contactanos y accedé a la
+            mejor atención de la Zona Sur.
+          </p>
+          <Link
+            to="/contacto"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-gray-100 transition-colors"
+          >
+            Contactar ahora
+          </Link>
         </div>
       </section>
     </>

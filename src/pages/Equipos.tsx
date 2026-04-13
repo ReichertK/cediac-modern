@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Cpu, ShieldCheck, Scan, Radio } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Cpu, ShieldCheck, Scan, Radio, CalendarCheck } from "lucide-react";
 
 
 interface Equipment {
@@ -211,6 +212,26 @@ export default function Equipos() {
           </p>
         </div>
       </motion.section>
+
+      {/* CTA Banner */}
+      <section className="bg-primary-500 py-14 text-center text-white">
+        <div className="mx-auto max-w-3xl px-4">
+          <CalendarCheck size={40} className="mx-auto mb-4 text-white/80" />
+          <h2 className="text-2xl font-bold sm:text-3xl">
+            ¿Necesitás realizarte un estudio?
+          </h2>
+          <p className="mt-3 text-primary-100">
+            Agendá tu turno hoy mismo y accedé a la mejor tecnología diagnóstica
+            de la Zona Sur.
+          </p>
+          <Link
+            to="/contacto"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-gray-100 transition-colors"
+          >
+            Agendar un turno
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

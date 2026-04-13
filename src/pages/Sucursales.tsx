@@ -28,9 +28,9 @@ const sucursales = [
       saturday: "Sábados: 08:00 – 13:00",
     },
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.5!2d-58.2120158!3d-34.7563982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32f47da240687%3A0x209ef419397073cd!2sCediac!5e0!3m2!1ses-419!2sar!4v1700000000000",
+      "https://maps.google.com/maps?q=Calle+7+entre+147+y+148+Berazategui+Buenos+Aires&t=&z=16&ie=UTF8&iwloc=&output=embed",
     mapLink:
-      "https://www.google.com/maps/place/Cediac/@-34.7563982,-58.2120158,17z",
+      "https://www.google.com/maps/search/Calle+7+entre+147+y+148+Berazategui+Buenos+Aires",
     services: [
       "Tomografía Axial Computada",
       "Resonancia Magnética (Resonador abierto)",
@@ -58,9 +58,9 @@ const sucursales = [
       saturday: "Sábados: 09:00 – 13:00",
     },
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.5!2d-58.2575!3d-34.7208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zSHVtYmVydG8gUHJpbW8gMzQzLCBRdWlsbWVz!5e0!3m2!1ses-419!2sar!4v1700000000000",
+      "https://maps.google.com/maps?q=Humberto+Primo+343+Quilmes+Buenos+Aires&t=&z=16&ie=UTF8&iwloc=&output=embed",
     mapLink:
-      "https://www.google.com/maps/search/CEDIAC+Quilmes+Humberto+Primo+343",
+      "https://www.google.com/maps/search/Humberto+Primo+343+Quilmes+Buenos+Aires",
     services: [
       "Resonancia Magnética (MRI)",
       "Tomografía Axial Computada",

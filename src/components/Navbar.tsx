@@ -8,6 +8,7 @@ const links = [
   { to: "/nosotros", label: "Nosotros" },
   { to: "/servicios", label: "Servicios" },
   { to: "/equipos", label: "Equipos" },
+  { to: "/coberturas", label: "Coberturas" },
   { to: "/sucursales", label: "Sucursales" },
   { to: "/contacto", label: "Contacto" },
   { to: "/faq", label: "Preguntas Frecuentes" },
