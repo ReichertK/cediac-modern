@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, MessageCircle } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 
 const faqs = [
@@ -70,6 +71,10 @@ const accordionContent = {
 
 
 export default function Faq() {
+  usePageTitle(
+    "Preguntas frecuentes",
+    "Respuestas a las dudas más comunes sobre turnos, coberturas, preparación de estudios y entrega de resultados en CEDIAC Group.",
+  );
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(index: number) {
@@ -129,12 +134,15 @@ export default function Faq() {
                     onClick={() => toggle(i)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                     aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${i}`}
+                    id={`faq-trigger-${i}`}
                   >
                     <span className="text-base font-semibold text-gray-900">
                       {faq.question}
                     </span>
                     <ChevronDown
                       size={20}
+                      aria-hidden="true"
                       className={`shrink-0 text-gray-400 transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
@@ -144,6 +152,9 @@ export default function Faq() {
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={`faq-panel-${i}`}
+                        role="region"
+                        aria-labelledby={`faq-trigger-${i}`}
                         variants={accordionContent}
                         initial="initial"
                         animate="animate"

@@ -15,6 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 
 const areas = [
@@ -103,6 +104,10 @@ const fadeUp = {
 
 
 export default function Kinesiologia() {
+  usePageTitle(
+    "Kinesiología",
+    "Rehabilitación integral en CEDIAC Group: traumatológica, neurológica, respiratoria y deportiva. Sedes en Berazategui y Quilmes.",
+  );
   /* Parallax hero */
   const { scrollY } = useScroll();
   const heroY = useTransform(scrollY, [0, 500], [0, 150]);

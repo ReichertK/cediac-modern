@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, AlertCircle, MessageCircle } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 const coberturas = [
   "PAMI",
@@ -31,6 +32,10 @@ const fadeUp = {
 };
 
 export default function Coberturas() {
+  usePageTitle(
+    "Coberturas",
+    "Obras sociales, prepagas y PAMI que trabajan con CEDIAC Group. Consultá la cobertura para tu estudio o tratamiento.",
+  );
   return (
     <>
       {/* Hero */}

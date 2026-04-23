@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 const beneficios = [
   {
@@ -94,6 +95,10 @@ const fadeUp = {
 };
 
 export default function Prestadores() {
+  usePageTitle(
+    "Prestadores y obras sociales",
+    "Sumá tu obra social o prepaga a la red CEDIAC Group. Completá el formulario de contratación y te contactamos en 48 horas hábiles.",
+  );
   const [sending, setSending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 

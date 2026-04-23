@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
 import type { BranchKey } from "../lib/whatsapp";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 
 const sucursales: Array<{
@@ -98,6 +99,10 @@ const fadeUp = {
 
 
 export default function Sucursales() {
+  usePageTitle(
+    "Sucursales",
+    "CEDIAC Group Berazategui (Calle 7) y Quilmes (Humberto Primo 343). Direcciones, teléfonos y horarios de atención.",
+  );
   return (
     <>
       {/* Header */}

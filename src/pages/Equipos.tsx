@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { Cpu, ShieldCheck, Scan, Radio, CalendarCheck } from "lucide-react";
 
 
@@ -93,6 +94,10 @@ const fadeUp = {
 
 
 export default function Equipos() {
+  usePageTitle(
+    "Equipos",
+    "Equipamiento de última generación en CEDIAC Group: resonadores abiertos, tomógrafos multicorte, ecógrafos 4D y mamógrafos digitales.",
+  );
   return (
     <>
       {/* Header */}

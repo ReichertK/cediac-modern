@@ -4,11 +4,115 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d4ed8" />
     <meta name="description" content="CEDIAC Group — Centro de Diagnóstico por Imágenes de Alta Complejidad y Kinesiología en Zona Sur. Resonancia magnética abierta, tomografía computada, ecografía, mamografía digital, rayos X y rehabilitación integral. Sedes en Berazategui y Quilmes. Obras sociales, prepagas y PAMI." />
+    <meta name="keywords" content="CEDIAC, diagnóstico por imágenes, resonancia magnética, tomografía, ecografía, mamografía, rayos X, kinesiología, Berazategui, Quilmes, PAMI, obras sociales" />
+    <meta name="author" content="CEDIAC Group" />
+    <link rel="canonical" href="https://reichertk.github.io/cediac-modern/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CEDIAC Group" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="CEDIAC Group | Diagnóstico por Imágenes y Kinesiología en Zona Sur" />
+    <meta property="og:description" content="Centro de Diagnóstico por Imágenes de Alta Complejidad y Kinesiología. Sedes en Berazategui y Quilmes. Atendemos obras sociales, prepagas y PAMI." />
+    <meta property="og:url" content="https://reichertk.github.io/cediac-modern/" />
+    <meta property="og:image" content="https://reichertk.github.io/cediac-modern/images/FRENTE-C7.jpg" />
+    <meta property="og:image:alt" content="Frente de la sede CEDIAC Berazategui Calle 7" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CEDIAC Group | Diagnóstico por Imágenes y Kinesiología" />
+    <meta name="twitter:description" content="Resonancia, tomografía, ecografía, mamografía y kinesiología en Berazategui y Quilmes." />
+    <meta name="twitter:image" content="https://reichertk.github.io/cediac-modern/images/FRENTE-C7.jpg" />
+
     <title>CEDIAC Group | Diagnóstico por Imágenes y Kinesiología en Zona Sur</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: MedicalBusiness con dos sucursales -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "CEDIAC Group",
+        "alternateName": "Centro de Diagnóstico por Imágenes, Alta Complejidad y Kinesiología",
+        "url": "https://reichertk.github.io/cediac-modern/",
+        "logo": "https://reichertk.github.io/cediac-modern/favicon.svg",
+        "medicalSpecialty": [
+          "Radiology",
+          "PhysicalTherapy",
+          "Cardiovascular",
+          "Obstetric"
+        ],
+        "department": [
+          {
+            "@type": "MedicalClinic",
+            "name": "CEDIAC Berazategui — Calle 7",
+            "image": "https://reichertk.github.io/cediac-modern/images/FRENTE-C7.jpg",
+            "telephone": "+54-11-5263-7047",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Calle 7 entre 147 y 148",
+              "addressLocality": "Berazategui",
+              "addressRegion": "Buenos Aires",
+              "addressCountry": "AR"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "19:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "08:00",
+                "closes": "13:00"
+              }
+            ]
+          },
+          {
+            "@type": "MedicalClinic",
+            "name": "CEDIAC Quilmes — Humberto Primo",
+            "image": "https://reichertk.github.io/cediac-modern/images/H3.jpg",
+            "telephone": "+54-11-4067-6730",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Humberto Primo 343",
+              "addressLocality": "Quilmes",
+              "addressRegion": "Buenos Aires",
+              "addressCountry": "AR"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+              }
+            ]
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+54-11-5263-8980",
+            "contactType": "Central de Turnos",
+            "areaServed": "AR",
+            "availableLanguage": "Spanish"
+          }
+        ]
+      }
+    </script>
   </head>
   <body class="antialiased">
     <div id="root"></div>

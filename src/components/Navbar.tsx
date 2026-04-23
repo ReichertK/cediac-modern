@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,21 +22,48 @@ const moreLinks = [
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `text-sm font-medium transition-colors duration-200 ${
+  `relative text-sm font-medium transition-colors duration-200 pb-1 ${
     isActive
-      ? "text-primary-500"
+      ? "text-primary-600 after:absolute after:inset-x-0 after:-bottom-[2px] after:h-[2px] after:rounded-full after:bg-primary-500"
       : "text-gray-700 hover:text-primary-500"
   }`;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const moreWrapperRef = useRef<HTMLDivElement>(null);
+  const moreButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Cierra el dropdown con Escape y al perder foco fuera del contenedor
+  useEffect(() => {
+    if (!moreOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMoreOpen(false);
+        moreButtonRef.current?.focus();
+      }
+    };
+    const onDocClick = (e: MouseEvent) => {
+      if (
+        moreWrapperRef.current &&
+        !moreWrapperRef.current.contains(e.target as Node)
+      ) {
+        setMoreOpen(false);
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onDocClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onDocClick);
+    };
+  }, [moreOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2" aria-label="CEDIAC Group - Inicio">
           <span className="text-xl font-bold tracking-tight text-primary-700">
             CEDIAC<span className="text-accent-500"> Group</span>
           </span>
@@ -45,33 +72,44 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className="hidden lg:flex lg:items-center lg:gap-6">
           {primaryLinks.map((l) => (
-            <NavLink key={l.to} to={l.to} className={navLinkClass}>
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to === "/"}
+              className={navLinkClass}
+            >
               {l.label}
             </NavLink>
           ))}
 
           {/* Dropdown "Más" */}
           <div
+            ref={moreWrapperRef}
             className="relative"
             onMouseEnter={() => setMoreOpen(true)}
             onMouseLeave={() => setMoreOpen(false)}
           >
             <button
+              ref={moreButtonRef}
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors"
-              aria-haspopup="true"
+              className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 rounded"
+              aria-haspopup="menu"
               aria-expanded={moreOpen}
+              aria-controls="nav-more-menu"
             >
               Más
               <ChevronDown
                 size={14}
+                aria-hidden="true"
                 className={`transition-transform duration-200 ${moreOpen ? "rotate-180" : ""}`}
               />
             </button>
             <AnimatePresence>
               {moreOpen && (
                 <motion.div
+                  id="nav-more-menu"
+                  role="menu"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
@@ -83,6 +121,7 @@ export default function Navbar() {
                       <NavLink
                         key={l.to}
                         to={l.to}
+                        role="menuitem"
                         onClick={() => setMoreOpen(false)}
                         className={({ isActive }) =>
                           `block rounded-lg px-3 py-2.5 transition-colors ${
@@ -120,6 +159,8 @@ export default function Navbar() {
             className="lg:hidden rounded-md p-2 text-gray-600 hover:bg-gray-100"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -130,6 +171,7 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -141,6 +183,7 @@ export default function Navbar() {
                 <NavLink
                   key={l.to}
                   to={l.to}
+                  end={l.to === "/"}
                   onClick={() => setOpen(false)}
                   className={({ isActive }) =>
                     `block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
@@ -183,7 +226,7 @@ export default function Navbar() {
                 subtitle="Elegí la sucursal para coordinar tu atención."
               >
                 <Phone size={16} />
-                Solicitar Turno por WhatsApp
+                Solicitar turno por WhatsApp
               </WhatsAppCTA>
             </div>
           </motion.div>

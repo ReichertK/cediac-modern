@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { usePageTitle } from "../hooks/usePageTitle";
 import {
   Cpu,
   ShieldCheck,
@@ -50,6 +51,10 @@ const fadeUp = {
 
 
 export default function Nosotros() {
+  usePageTitle(
+    "Nosotros",
+    "Conocé al equipo de CEDIAC Group: más de 20 años brindando diagnóstico por imágenes y kinesiología en Zona Sur con equipamiento de última generación.",
+  );
   return (
     <>
       {/* Hero */}

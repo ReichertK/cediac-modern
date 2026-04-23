@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Brain,
@@ -99,6 +100,10 @@ const tabContent = {
 
 
 export default function Servicios() {
+  usePageTitle(
+    "Servicios",
+    "Resonancia magnética abierta, tomografía, ecografía, mamografía digital, radiología y kinesiología. Conocé todos los servicios de CEDIAC Group.",
+  );
   const [active, setActive] = useState(0);
   const current = services[active];
 

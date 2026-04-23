@@ -15,6 +15,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 
 const services = [
@@ -81,6 +82,10 @@ const fadeUp = {
 
 
 export default function Home() {
+  usePageTitle(
+    undefined,
+    "CEDIAC Group: diagnóstico por imágenes de alta complejidad y kinesiología en Berazategui y Quilmes. Resonancia, tomografía, ecografía, mamografía y rehabilitación integral.",
+  );
   return (
     <>
       {/* Hero */}

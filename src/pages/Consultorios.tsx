@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 interface Especialidad {
   icon: LucideIcon;
@@ -83,6 +84,10 @@ const fadeUp = {
 };
 
 export default function Consultorios() {
+  usePageTitle(
+    "Consultorios médicos",
+    "Especialidades médicas en la sede Quilmes de CEDIAC Group: cardiología, ginecología, clínica médica y traumatología.",
+  );
   return (
     <>
       {/* Hero */}

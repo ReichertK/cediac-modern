@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
 import { WHATSAPP_BRANCHES } from "../lib/whatsapp";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 
 const contactCards = [
@@ -66,6 +67,10 @@ const fadeUp = {
 
 
 export default function Contacto() {
+  usePageTitle(
+    "Contacto",
+    "Contactá a CEDIAC Group por WhatsApp, teléfono o formulario. Atención en Berazategui y Quilmes.",
+  );
   const [sending, setSending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
