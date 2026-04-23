@@ -15,6 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
 
 
@@ -148,6 +149,7 @@ export default function Kinesiologia() {
 
         <div className="relative flex h-full items-center justify-center">
           <div className="mx-auto max-w-4xl px-4 text-center">
+            <Breadcrumb items={[{ label: "Kinesiología" }]} onDark className="mb-6 justify-center" />
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

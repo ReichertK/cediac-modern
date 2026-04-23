@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
 import {
   Cpu,
@@ -67,6 +68,7 @@ export default function Nosotros() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 text-center lg:px-8 lg:py-36">
+          <Breadcrumb items={[{ label: "Nosotros" }]} onDark className="mb-8 justify-center" />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

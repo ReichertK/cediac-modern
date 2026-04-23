@@ -6,8 +6,8 @@ import WhatsAppCTA from "./WhatsAppCTA";
 
 const primaryLinks = [
   { to: "/", label: "Inicio" },
-  { to: "/nosotros", label: "Nosotros" },
   { to: "/servicios", label: "Servicios" },
+  { to: "/kinesiologia", label: "Kinesiología" },
   { to: "/equipos", label: "Equipos" },
   { to: "/coberturas", label: "Coberturas" },
   { to: "/sucursales", label: "Sucursales" },
@@ -15,16 +15,16 @@ const primaryLinks = [
 ];
 
 const moreLinks = [
+  { to: "/nosotros", label: "Nosotros", desc: "Historia y equipo de CEDIAC" },
   { to: "/consultorios", label: "Consultorios Médicos", desc: "Especialidades en Quilmes" },
-  { to: "/kinesiologia", label: "Kinesiología", desc: "Rehabilitación integral" },
   { to: "/prestadores", label: "Prestadores / Obras Sociales", desc: "Sumate como prestador" },
   { to: "/faq", label: "Preguntas Frecuentes", desc: "Dudas comunes" },
 ];
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `relative text-sm font-medium transition-colors duration-200 pb-1 ${
+  `relative inline-flex items-center text-sm font-medium leading-none transition-colors duration-200 ${
     isActive
-      ? "text-primary-600 after:absolute after:inset-x-0 after:-bottom-[2px] after:h-[2px] after:rounded-full after:bg-primary-500"
+      ? "text-primary-600 after:absolute after:inset-x-0 after:-bottom-2 after:h-[2px] after:rounded-full after:bg-primary-500"
       : "text-gray-700 hover:text-primary-500"
   }`;
 
@@ -93,7 +93,7 @@ export default function Navbar() {
               ref={moreButtonRef}
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 rounded"
+              className="inline-flex items-center gap-1 text-sm font-medium leading-none text-gray-700 hover:text-primary-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 rounded"
               aria-haspopup="menu"
               aria-expanded={moreOpen}
               aria-controls="nav-more-menu"

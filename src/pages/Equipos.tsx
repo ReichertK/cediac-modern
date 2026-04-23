@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { Cpu, ShieldCheck, Scan, Radio, CalendarCheck } from "lucide-react";
 
@@ -109,6 +110,14 @@ export default function Equipos() {
           <div className="absolute inset-0 bg-primary-900/75" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
+          <Breadcrumb
+            items={[
+              { label: "Servicios", to: "/servicios" },
+              { label: "Equipos" },
+            ]}
+            onDark
+            className="mb-8 justify-center"
+          />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -28,7 +28,7 @@ export default function Breadcrumb({ items, onDark = false, className = "" }: Pr
       aria-label="Ruta de navegación"
       className={`text-xs sm:text-sm ${baseText} ${className}`}
     >
-      <ol className="flex flex-wrap items-center gap-1">
+      <ol className="inline-flex flex-wrap items-center gap-1">
         <li>
           <Link
             to="/"

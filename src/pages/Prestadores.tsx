@@ -16,6 +16,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
+import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
 
 const beneficios = [
@@ -161,6 +162,7 @@ export default function Prestadores() {
           >
             <Handshake size={28} className="text-accent-300" />
           </motion.div>
+          <Breadcrumb items={[{ label: "Prestadores y obras sociales" }]} onDark className="mb-6 justify-center" />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
