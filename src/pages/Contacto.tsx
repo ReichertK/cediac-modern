@@ -10,6 +10,8 @@ import {
   MessageCircle,
   Send,
 } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
+import { WHATSAPP_BRANCHES } from "../lib/whatsapp";
 
 
 const contactCards = [
@@ -18,12 +20,6 @@ const contactCards = [
     title: "Central de Turnos",
     lines: ["011 5263-8980"],
     href: "tel:01152638980",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    lines: ["011 2825-2135 (Berazategui)", "011 6191-1441 (Quilmes)"],
-    href: "https://wa.me/5491128252135",
   },
   {
     icon: Mail,
@@ -276,6 +272,43 @@ export default function Contacto() {
 
             {/* Info column (2/5) */}
             <div className="flex flex-col gap-4 lg:col-span-2">
+              {/* Card especial: WhatsApp con selector de sucursal */}
+              <motion.div
+                custom={0}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={fadeUp}
+                className="rounded-xl border border-green-200 bg-green-50/50 p-5 shadow-sm"
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#25D366] text-white">
+                    <MessageCircle size={20} />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900">
+                    WhatsApp
+                  </h3>
+                </div>
+                <ul className="mb-3 space-y-1 pl-[52px] text-sm text-gray-600">
+                  {WHATSAPP_BRANCHES.map((b) => (
+                    <li key={b.key}>
+                      <span className="font-medium text-gray-800">{b.name}:</span>{" "}
+                      {b.display}
+                    </li>
+                  ))}
+                </ul>
+                <div className="pl-[52px]">
+                  <WhatsAppCTA
+                    className="inline-flex items-center gap-2 rounded-lg bg-[#25D366] px-4 py-2 text-sm font-semibold text-white shadow hover:bg-[#1ebe5b] transition-colors"
+                    title="¿A qué sucursal escribís?"
+                    subtitle="Elegí y te atendemos por WhatsApp."
+                  >
+                    <MessageCircle size={14} />
+                    Elegir sucursal
+                  </WhatsAppCTA>
+                </div>
+              </motion.div>
+
               {contactCards.map((card, i) => (
                 <motion.div
                   key={card.title}

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, AlertCircle, MessageCircle } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
 
 const coberturas = [
   "PAMI",
@@ -133,15 +134,15 @@ export default function Coberturas() {
                   previamente por WhatsApp o telefónicamente para confirmar la
                   cobertura específica de tu prestación.
                 </p>
-                <a
-                  href="https://wa.me/5491128252135"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppCTA
                   className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary-500 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-primary-600 transition-colors"
+                  title="Consultá tu cobertura"
+                  subtitle="Elegí la sucursal donde te atenderás."
+                  message="Hola, quería consultar por la cobertura de mi obra social / prepaga."
                 >
                   <MessageCircle size={18} />
                   Consultar cobertura por WhatsApp
-                </a>
+                </WhatsAppCTA>
               </div>
             </div>
           </motion.div>

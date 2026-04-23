@@ -14,6 +14,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
 
 
 const areas = [
@@ -324,15 +325,16 @@ export default function Kinesiologia() {
             Calle 7, con instalaciones diseñadas para tu comodidad y
             recuperación.
           </p>
-          <a
-            href="https://wa.me/5491128252135"
-            target="_blank"
-            rel="noopener noreferrer"
+          <WhatsAppCTA
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-green-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-green-600 transition-colors"
+            preferred="berazategui"
+            title="Turno de Kinesiología"
+            subtitle="La kinesiología funciona en Berazategui (Calle 7)."
+            message="Hola, quería solicitar un turno de kinesiología."
           >
             <MessageCircle size={18} />
             Solicitar turno por WhatsApp
-          </a>
+          </WhatsAppCTA>
         </div>
       </motion.section>
     </>

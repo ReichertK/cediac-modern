@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, MessageCircle } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
 
 
 const faqs = [
@@ -174,15 +175,14 @@ export default function Faq() {
             <p className="mt-2 text-sm text-gray-500">
               Comunicate con nosotros y te ayudamos con lo que necesites.
             </p>
-            <a
-              href="https://wa.me/5491128252135"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppCTA
               className="mt-5 inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-green-700 transition-colors"
+              title="¡Escribínos!"
+              subtitle="Elegí la sede más cercana y te respondemos."
             >
               <MessageCircle size={18} />
               Escribinos por WhatsApp
-            </a>
+            </WhatsAppCTA>
           </motion.div>
         </div>
       </section>

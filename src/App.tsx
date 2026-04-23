@@ -11,6 +11,8 @@ import Nosotros from "./pages/Nosotros";
 import Faq from "./pages/Faq";
 import Servicios from "./pages/Servicios";
 import Coberturas from "./pages/Coberturas";
+import Consultorios from "./pages/Consultorios";
+import Prestadores from "./pages/Prestadores";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="equipos" element={<Equipos />} />
           <Route path="contacto" element={<Contacto />} />
           <Route path="kinesiologia" element={<Kinesiologia />} />
+          <Route path="consultorios" element={<Consultorios />} />
+          <Route path="prestadores" element={<Prestadores />} />
           <Route path="nosotros" element={<Nosotros />} />
           <Route path="coberturas" element={<Coberturas />} />
           <Route path="faq" element={<Faq />} />

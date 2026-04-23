@@ -7,9 +7,24 @@ import {
   Navigation,
   Stethoscope,
 } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
+import type { BranchKey } from "../lib/whatsapp";
 
 
-const sucursales = [
+const sucursales: Array<{
+  name: string;
+  address: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+  phones: Array<{ label: string; href: string }>;
+  whatsapp: BranchKey;
+  hours: { weekdays: string; saturday: string };
+  mapSrc: string;
+  mapLink: string;
+  services: string[];
+  highlight: string;
+}> = [
   {
     name: "Berazategui — Calle 7",
     address: "Calle 7 entre 147 y 148, Berazategui, Prov. de Buenos Aires",
@@ -22,7 +37,7 @@ const sucursales = [
       { label: "011 5263-2435 (Kinesio PAMI)", href: "tel:01152632435" },
       { label: "011 5263-7048", href: "tel:01152637048" },
     ],
-    whatsapp: "5491128252135",
+    whatsapp: "berazategui",
     hours: {
       weekdays: "Lunes a Viernes: 08:00 – 19:00",
       saturday: "Sábados: 08:00 – 13:00",
@@ -52,7 +67,7 @@ const sucursales = [
       { label: "011 5263-7049", href: "tel:01152637049" },
       { label: "011 4067-6730", href: "tel:01140676730" },
     ],
-    whatsapp: "5491161911441",
+    whatsapp: "quilmes",
     hours: {
       weekdays: "Lunes a Viernes: 08:00 – 20:00",
       saturday: "Sábados: 09:00 – 13:00",
@@ -231,15 +246,15 @@ export default function Sucursales() {
                       <Phone size={16} />
                       Llamar
                     </a>
-                    <a
-                      href={`https://wa.me/${s.whatsapp}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <WhatsAppCTA
                       className="inline-flex items-center gap-2 rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-green-700 transition-colors"
+                      preferred={s.whatsapp}
+                      title={`WhatsApp · ${s.name}`}
+                      subtitle="Elegí la sucursal más cómoda para vos."
                     >
                       <MessageCircle size={16} />
                       WhatsApp
-                    </a>
+                    </WhatsAppCTA>
                     <a
                       href={s.mapLink}
                       target="_blank"

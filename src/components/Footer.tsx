@@ -7,6 +7,8 @@ const quickLinks = [
   { to: "/equipos", label: "Equipos" },
   { to: "/coberturas", label: "Coberturas" },
   { to: "/kinesiologia", label: "Kinesiología" },
+  { to: "/consultorios", label: "Consultorios Médicos" },
+  { to: "/prestadores", label: "Prestadores" },
   { to: "/sucursales", label: "Sucursales" },
   { to: "/contacto", label: "Contacto" },
   { to: "/faq", label: "Preguntas Frecuentes" },

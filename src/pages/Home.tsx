@@ -10,7 +10,11 @@ import {
   HeartPulse,
   Bone,
   Activity,
+  Stethoscope,
+  Building2,
+  MessageCircle,
 } from "lucide-react";
+import WhatsAppCTA from "../components/WhatsAppCTA";
 
 
 const services = [
@@ -52,14 +56,16 @@ const branches = [
     address: "Calle 7 entre 147 y 148, Berazategui",
     phones: ["011 5263-7047", "011 5263-2435", "011 5263-7048"],
     whatsapp: "5491128252135",
+    branch: "berazategui" as const,
     mapQuery: "CEDIAC+Berazategui+Calle+7",
   },
   {
     name: "Quilmes — Humberto Primo",
     address: "Humberto Primo 343, Quilmes",
     phones: ["011 5263-7049"],
-    whatsapp: "5491161911441",
+    whatsapp: "5491140676730",
     mapQuery: "CEDIAC+Quilmes+Humberto+Primo+343",
+    branch: "quilmes" as const,
   },
 ];
 
@@ -120,15 +126,14 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap justify-center gap-4"
           >
-            <a
-              href="https://wa.me/5491161911441"
-              target="_blank"
-              rel="noopener noreferrer"
+            <WhatsAppCTA
               className="inline-flex items-center gap-2 rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-white shadow-lg hover:bg-accent-600 transition-colors"
+              title="Solicitá tu turno"
+              subtitle="Elegí la sucursal para coordinar tu atención."
             >
               <Phone size={18} />
               Solicitar Turno
-            </a>
+            </WhatsAppCTA>
             <Link
               to="/servicios"
               className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/10 transition-colors"
@@ -221,15 +226,15 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-3">
-                  <a
-                    href={`https://wa.me/${b.whatsapp}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <WhatsAppCTA
                     className="inline-flex items-center gap-2 rounded-lg bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-primary-600 transition-colors"
+                    preferred={b.branch}
+                    title={`WhatsApp · ${b.name}`}
+                    subtitle="Podés escribirnos a cualquier sucursal."
                   >
                     <Phone size={14} />
                     WhatsApp
-                  </a>
+                  </WhatsAppCTA>
                   <a
                     href={`https://www.google.com/maps/search/${b.mapQuery}`}
                     target="_blank"
@@ -242,6 +247,110 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Consultorios + Prestadores */}
+      <section className="bg-gray-50 py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="mx-auto mb-14 max-w-2xl text-center">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+              Más servicios
+            </h2>
+            <p className="mt-4 text-gray-500">
+              Consultorios médicos en Quilmes y prestaciones para obras
+              sociales.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Consultorios */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5 }}
+              className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+            >
+              <div className="relative h-48 overflow-hidden bg-primary-100">
+                <img
+                  src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Consultorios médicos"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-primary-700">
+                  <Stethoscope size={14} />
+                  Sede Quilmes
+                </div>
+              </div>
+              <div className="p-6 lg:p-8">
+                <h3 className="text-xl font-bold text-gray-900">
+                  Consultorios Médicos
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  Cardiología, ginecología, clínica médica, traumatología y
+                  más especialidades en la sede de Quilmes.
+                </p>
+                <Link
+                  to="/consultorios"
+                  className="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-primary-700 transition-colors"
+                >
+                  Ver especialidades
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Prestadores */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+            >
+              <div className="relative h-48 overflow-hidden bg-primary-100">
+                <img
+                  src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  alt="Prestación de servicios a obras sociales"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+                <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-primary-700">
+                  <Building2 size={14} />
+                  Obras sociales y prepagas
+                </div>
+              </div>
+              <div className="p-6 lg:p-8">
+                <h3 className="text-xl font-bold text-gray-900">
+                  Prestación de Servicios
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  Sumate como prestador: ofrecemos imágenes de alta complejidad
+                  a obras sociales, prepagas y clínicas de la Zona Sur.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <Link
+                    to="/prestadores"
+                    className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-primary-700 transition-colors"
+                  >
+                    Conocer propuesta
+                    <ArrowRight size={14} />
+                  </Link>
+                  <Link
+                    to="/prestadores#contratacion"
+                    className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+                  >
+                    <MessageCircle size={14} />
+                    Solicitar contratación
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
