@@ -27,7 +27,7 @@ export default function WhatsAppChooser({
 }: Props) {
   // Ordena poniendo la sucursal preferida primero
   const ordered = preferred
-    ? [...WHATSAPP_BRANCHES].sort((a, b) => {
+    ? WHATSAPP_BRANCHES.toSorted((a, b) => {
         if (a.key === preferred) return -1;
         if (b.key === preferred) return 1;
         return 0;
@@ -79,7 +79,7 @@ export default function WhatsAppChooser({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="relative bg-gradient-to-br from-[#25D366] to-[#128C7E] px-6 py-6 text-white">
+            <div className="relative bg-gradient-to-br from-[#25D366] to-[#128C7E] p-6 text-white">
               <button
                 type="button"
                 onClick={onClose}

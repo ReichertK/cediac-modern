@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ChevronRight, Home } from "lucide-react";
 
-export interface Crumb {
+interface Crumb {
   label: string;
   to?: string; // último crumb suele no tener link
 }
@@ -41,7 +41,7 @@ export default function Breadcrumb({ items, onDark = false, className = "" }: Pr
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
           return (
-            <li key={`${item.label}-${i}`} className="flex items-center gap-1">
+            <li key={item.to ?? item.label} className="flex items-center gap-1">
               <ChevronRight size={14} className={separator} aria-hidden="true" />
               {isLast || !item.to ? (
                 <span

@@ -35,12 +35,6 @@ export const WHATSAPP_BRANCHES: WhatsAppBranch[] = [
   },
 ];
 
-export function getBranch(key: BranchKey): WhatsAppBranch {
-  const b = WHATSAPP_BRANCHES.find((x) => x.key === key);
-  if (!b) throw new Error(`Sucursal de WhatsApp desconocida: ${key}`);
-  return b;
-}
-
 export function waLink(number: string, message?: string): string {
   const base = `https://wa.me/${number}`;
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;

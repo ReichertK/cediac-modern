@@ -126,7 +126,7 @@ export default function Consultorios() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mx-auto mt-4 max-w-2xl text-lg text-primary-100"
           >
-            Sede Quilmes — Humberto Primo 343. Atención médica en múltiples
+            Sede Quilmes (Humberto Primo 343). Atención médica en múltiples
             especialidades, integrada con nuestro centro de diagnóstico por
             imágenes.
           </motion.p>
@@ -252,7 +252,7 @@ export default function Consultorios() {
             Reservá tu turno en consultorios
           </h2>
           <p className="mt-3 text-primary-100">
-            Sede Quilmes — Humberto Primo 343. Coordinamos tu atención por
+            Sede Quilmes (Humberto Primo 343). Coordinamos tu atención por
             WhatsApp en minutos.
           </p>
           <WhatsAppCTA

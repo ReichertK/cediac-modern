@@ -48,3 +48,19 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Accesibilidad: respetar la preferencia de reducción de movimiento del usuario
+   (WCAG 2.3.3). Neutraliza animaciones CSS, transiciones y Framer Motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

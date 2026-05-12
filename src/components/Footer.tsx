@@ -15,6 +15,7 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="bg-primary-900 text-gray-300">
       <div className="mx-auto max-w-7xl px-4 py-14 lg:px-8">
@@ -60,7 +61,7 @@ export default function Footer() {
                 <div>
                   <span className="font-medium text-white">Berazategui</span>
                   <br />
-                  Calle 7 — Tel: 011 5263-7047
+                  Calle 7. Tel: 011 5263-7047
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -68,7 +69,7 @@ export default function Footer() {
                 <div>
                   <span className="font-medium text-white">Quilmes</span>
                   <br />
-                  Humberto Primo 343 — Tel: 011 5263-7049
+                  Humberto Primo 343. Tel: 011 5263-7049
                 </div>
               </li>
             </ul>
@@ -122,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-          © {new Date().getFullYear()} CEDIAC Group. Todos los derechos reservados.
+          © {year} CEDIAC Group. Todos los derechos reservados.
         </div>
       </div>
     </footer>

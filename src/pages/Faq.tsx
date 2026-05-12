@@ -123,7 +123,7 @@ export default function Faq() {
 
               return (
                 <motion.div
-                  key={i}
+                  key={faq.question}
                   custom={i}
                   initial="hidden"
                   whileInView="visible"

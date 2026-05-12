@@ -120,8 +120,8 @@ export default function Nosotros() {
               pacientes que cada institución requiera en la zona.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              Hoy operamos en dos sedes —Berazategui Calle 7 y Quilmes Humberto
-              Primo 343— ofreciendo resonancia magnética, tomografía,
+              Hoy operamos en dos sedes (Berazategui Calle 7 y Quilmes Humberto
+              Primo 343), ofreciendo resonancia magnética, tomografía,
               mamografía, ecografía, radiología digital y un completo servicio
               de kinesiología, todo bajo un mismo techo.
             </p>

@@ -178,9 +178,8 @@ export default function Navbar() {
             transition={{ duration: 0.25 }}
             className="overflow-hidden lg:hidden border-t border-gray-200 bg-white"
           >
-            <div className="flex flex-col gap-1 px-4 py-4">
-              {primaryLinks.map((l) => (
-                <NavLink
+            <div className="flex flex-col gap-1 p-4">
+              {primaryLinks.map((l) => (                <NavLink
                   key={l.to}
                   to={l.to}
                   end={l.to === "/"}
