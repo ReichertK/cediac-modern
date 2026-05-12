@@ -100,7 +100,7 @@ export default function Home() {
 
         {/* Decorative circles */}
         <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-accent-500/10" />
-        <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-accent-400/10" />
+        <div className="pointer-events-none absolute -left-24 bottom-0 size-72 rounded-full bg-accent-400/10" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-24 text-center lg:py-36 lg:px-8">
           <m.h1
@@ -176,7 +176,7 @@ export default function Home() {
                 variants={fadeUp}
                 className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                   <s.icon size={24} />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">

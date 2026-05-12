@@ -96,7 +96,7 @@ export default function WhatsAppChooser({
                 <X size={20} />
               </button>
               <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/20">
+                <div className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/20">
                   <MessageCircle size={22} className="fill-white" />
                 </div>
                 <div>
@@ -124,7 +124,7 @@ export default function WhatsAppChooser({
                     }`}
                   >
                     <div
-                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-colors ${
+                      className={`flex size-11 shrink-0 items-center justify-center rounded-full transition-colors ${
                         isPreferred
                           ? "bg-primary-500 text-white"
                           : "bg-gray-100 text-gray-600 group-hover:bg-[#25D366] group-hover:text-white"

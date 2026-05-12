@@ -56,7 +56,7 @@ export default function Coberturas() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
+            className="mx-auto mb-3 flex size-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
           >
             <ShieldCheck size={28} className="text-accent-300" />
           </m.div>
@@ -128,7 +128,7 @@ export default function Coberturas() {
             className="rounded-2xl border border-amber-200 bg-amber-50 p-8 lg:p-10"
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600">
+              <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-600">
                 <AlertCircle size={22} />
               </div>
               <div>

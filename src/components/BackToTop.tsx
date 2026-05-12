@@ -27,7 +27,7 @@ export default function BackToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 12 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="fixed bottom-6 right-24 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-colors hover:bg-white hover:text-primary-600"
+          className="fixed bottom-6 right-24 z-40 flex size-11 items-center justify-center rounded-full border border-gray-200 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-colors hover:bg-white hover:text-primary-600"
         >
           <ArrowUp size={18} />
         </m.button>

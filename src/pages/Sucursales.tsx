@@ -232,7 +232,7 @@ export default function Sucursales() {
                     <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-gray-600">
                       {s.services.map((srv) => (
                         <li key={srv} className="flex items-center gap-1.5">
-                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent-400" />
+                          <span className="size-1.5 shrink-0 rounded-full bg-accent-400" />
                           {srv}
                         </li>
                       ))}

@@ -141,7 +141,7 @@ export default function Nosotros() {
               variants={fadeUp}
               className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                 <Target size={24} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">
@@ -164,7 +164,7 @@ export default function Nosotros() {
               variants={fadeUp}
               className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10"
             >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
+              <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
                 <Eye size={24} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">
@@ -206,7 +206,7 @@ export default function Nosotros() {
                 variants={fadeUp}
                 className="group flex flex-col items-center rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+                <div className="mb-4 flex size-14 items-center justify-center rounded-xl bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                   <v.icon size={28} />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">

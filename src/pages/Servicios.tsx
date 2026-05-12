@@ -190,7 +190,7 @@ export default function Servicios() {
               {/* Text */}
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600">
+                  <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600">
                     <current.icon size={24} />
                   </div>
                   <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
@@ -234,7 +234,7 @@ export default function Servicios() {
                 }}
                 className="group cursor-pointer rounded-2xl border border-gray-100 bg-gray-50 p-6 transition-all duration-300 hover:border-primary-200 hover:bg-white hover:shadow-lg"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary-100 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
+                <div className="mb-4 inline-flex size-11 items-center justify-center rounded-lg bg-primary-100 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                   <s.icon size={22} />
                 </div>
                 <h3 className="mb-1 text-lg font-semibold text-gray-900">

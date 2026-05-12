@@ -108,7 +108,7 @@ export default function Consultorios() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
+            className="mx-auto mb-3 flex size-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
           >
             <Stethoscope size={28} className="text-accent-300" />
           </m.div>
@@ -164,7 +164,7 @@ export default function Consultorios() {
                 variants={fadeUp}
                 className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50 p-5"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                   <b.icon size={20} />
                 </div>
                 <div>
@@ -181,8 +181,8 @@ export default function Consultorios() {
 
       {/* Grid Especialidades */}
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-100 via-primary-50/30 to-gray-100 py-20 lg:py-28">
-        <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-primary-200/20 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-accent-200/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 -top-32 size-96 rounded-full bg-primary-200/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 size-80 rounded-full bg-accent-200/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">

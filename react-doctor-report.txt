@@ -11,19 +11,14 @@ react-doctor v0.1.6
 Ô£ö Detecting language. Found TypeScript.
 - Detecting React Compiler. Not found.
 Ô£ö Detecting React Compiler. Not found.
-- Found 28 source files.
-Ô£ö Found 28 source files.
+- Found 34 source files.
+Ô£ö Found 34 source files.
 
 - Running lint checks...
 - Detecting dead code.
 Ô£ö Detecting dead code.
 - Running lint checks...
 Ô£ö Running lint checks.
-
-  [31mÔ£ù[39m [31mreact-doctor/effect-needs-cleanup[39m
-[90m      useEffect subscribes via `on(...)` but never returns a cleanup ÔÇö leaks the registration on every re-run and on unmount. Return a cleanup function that calls the matching remove/unsubscribe call[39m
-[90m      ÔåÆ Return a cleanup function that releases the subscription / timer: `return () => target.removeEventListener(name, handler)` for listeners, `return () => clearInterval(id)` / `clearTimeout(id)` for timers, or `return unsubscribe` if the subscribe call already returned one[39m
-[90m      src/pages/Kinesiologia.tsx:134[39m
 
   [33mÔÜá[39m [33mreact-doctor/design-no-default-tailwind-palette[39m [90m├ù213[39m
 [90m      bg-gray-50 reads as the Tailwind template default ÔÇö use zinc (true neutral), neutral (warmer), or stone (warmest)[39m
@@ -49,54 +44,74 @@ react-doctor v0.1.6
 [90m      src/pages/Servicios.tsx:235[39m
 [90m      src/pages/Servicios.tsx:240[39m
 [90m      src/pages/Servicios.tsx:243[39m
-[90m      src/pages/Prestadores.tsx:216[39m
-[90m      src/pages/Prestadores.tsx:219[39m
-[90m      src/pages/Prestadores.tsx:235[39m
-[90m      src/pages/Prestadores.tsx:240[39m
-[90m      src/pages/Prestadores.tsx:243[39m
-[90m      src/pages/Prestadores.tsx:253[39m
-[90m      src/pages/Prestadores.tsx:266[39m
-[90m      src/pages/Prestadores.tsx:269[39m
-[90m      src/pages/Prestadores.tsx:278[39m
-[90m      src/pages/Prestadores.tsx:312[39m
-[90m      src/pages/Prestadores.tsx:315[39m
-[90m      src/pages/Prestadores.tsx:328[39m
-[90m      src/pages/Prestadores.tsx:333[39m
-[90m      src/pages/Prestadores.tsx:336[39m
-[90m      src/pages/Prestadores.tsx:360[39m
-[90m      src/pages/Prestadores.tsx:363[39m
-[90m      src/pages/Prestadores.tsx:378[39m
-[90m      src/pages/Prestadores.tsx:387[39m
-[90m      src/pages/Prestadores.tsx:387[39m
-[90m      src/pages/Prestadores.tsx:387[39m
-[90m      src/pages/Prestadores.tsx:394[39m
-[90m      src/pages/Prestadores.tsx:403[39m
-[90m      src/pages/Prestadores.tsx:403[39m
-[90m      src/pages/Prestadores.tsx:403[39m
-[90m      src/pages/Prestadores.tsx:413[39m
-[90m      src/pages/Prestadores.tsx:423[39m
-[90m      src/pages/Prestadores.tsx:423[39m
-[90m      src/pages/Prestadores.tsx:423[39m
-[90m      src/pages/Prestadores.tsx:430[39m
-[90m      src/pages/Prestadores.tsx:438[39m
-[90m      src/pages/Prestadores.tsx:438[39m
-[90m      src/pages/Prestadores.tsx:438[39m
-[90m      src/pages/Prestadores.tsx:448[39m
-[90m      src/pages/Prestadores.tsx:458[39m
-[90m      src/pages/Prestadores.tsx:458[39m
-[90m      src/pages/Prestadores.tsx:458[39m
-[90m      src/pages/Prestadores.tsx:465[39m
-[90m      src/pages/Prestadores.tsx:475[39m
-[90m      src/pages/Prestadores.tsx:475[39m
-[90m      src/pages/Prestadores.tsx:475[39m
-[90m      src/pages/Prestadores.tsx:484[39m
-[90m      src/pages/Prestadores.tsx:492[39m
-[90m      src/pages/Prestadores.tsx:492[39m
-[90m      src/pages/Prestadores.tsx:507[39m
-[90m      src/pages/Prestadores.tsx:516[39m
-[90m      src/pages/Prestadores.tsx:516[39m
-[90m      src/pages/Prestadores.tsx:516[39m
-[90m      src/pages/Prestadores.tsx:531[39m
+[90m      src/pages/prestadores/ServiciosSection.tsx:7[39m
+[90m      src/pages/prestadores/ServiciosSection.tsx:20[39m
+[90m      src/pages/prestadores/ServiciosSection.tsx:23[39m
+[90m      src/pages/prestadores/ServiciosSection.tsx:32[39m
+[90m      src/pages/prestadores/PasosSection.tsx:9[39m
+[90m      src/pages/prestadores/PasosSection.tsx:12[39m
+[90m      src/pages/prestadores/PasosSection.tsx:25[39m
+[90m      src/pages/prestadores/PasosSection.tsx:30[39m
+[90m      src/pages/prestadores/PasosSection.tsx:33[39m
+[90m      src/pages/Consultorios.tsx:165[39m
+[90m      src/pages/Consultorios.tsx:165[39m
+[90m      src/pages/Consultorios.tsx:171[39m
+[90m      src/pages/Consultorios.tsx:174[39m
+[90m      src/pages/Consultorios.tsx:183[39m
+[90m      src/pages/Consultorios.tsx:183[39m
+[90m      src/pages/Consultorios.tsx:189[39m
+[90m      src/pages/Consultorios.tsx:192[39m
+[90m      src/pages/Consultorios.tsx:220[39m
+[90m      src/pages/Consultorios.tsx:224[39m
+[90m      src/pages/Consultorios.tsx:233[39m
+[90m      src/pages/Consultorios.tsx:234[39m
+[90m      src/pages/Consultorios.tsx:235[39m
+[90m      src/pages/Coberturas.tsx:84[39m
+[90m      src/pages/Coberturas.tsx:87[39m
+[90m      src/pages/Coberturas.tsx:90[39m
+[90m      src/pages/Coberturas.tsx:105[39m
+[90m      src/pages/Coberturas.tsx:111[39m
+[90m      src/pages/Coberturas.tsx:135[39m
+[90m      src/pages/Coberturas.tsx:138[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:65[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:68[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:79[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:88[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:88[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:88[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:95[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:104[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:104[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:104[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:114[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:124[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:124[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:124[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:131[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:139[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:139[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:139[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:149[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:159[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:159[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:159[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:166[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:176[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:176[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:176[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:185[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:193[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:193[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:208[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:217[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:217[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:217[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:232[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:9[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:12[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:28[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:33[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:36[39m
 [90m      src/pages/NotFound.tsx:17[39m
 [90m      src/pages/NotFound.tsx:28[39m
 [90m      src/pages/NotFound.tsx:31[39m
@@ -119,17 +134,17 @@ react-doctor v0.1.6
 [90m      src/pages/Nosotros.tsx:212[39m
 [90m      src/pages/Nosotros.tsx:215[39m
 [90m      src/pages/Nosotros.tsx:237[39m
-[90m      src/pages/Kinesiologia.tsx:201[39m
-[90m      src/pages/Kinesiologia.tsx:212[39m
-[90m      src/pages/Kinesiologia.tsx:214[39m
-[90m      src/pages/Kinesiologia.tsx:252[39m
-[90m      src/pages/Kinesiologia.tsx:260[39m
-[90m      src/pages/Kinesiologia.tsx:267[39m
-[90m      src/pages/Kinesiologia.tsx:267[39m
-[90m      src/pages/Kinesiologia.tsx:274[39m
-[90m      src/pages/Kinesiologia.tsx:277[39m
-[90m      src/pages/Kinesiologia.tsx:312[39m
+[90m      src/pages/Kinesiologia.tsx:205[39m
+[90m      src/pages/Kinesiologia.tsx:216[39m
+[90m      src/pages/Kinesiologia.tsx:218[39m
+[90m      src/pages/Kinesiologia.tsx:256[39m
+[90m      src/pages/Kinesiologia.tsx:264[39m
+[90m      src/pages/Kinesiologia.tsx:271[39m
+[90m      src/pages/Kinesiologia.tsx:271[39m
+[90m      src/pages/Kinesiologia.tsx:278[39m
+[90m      src/pages/Kinesiologia.tsx:281[39m
 [90m      src/pages/Kinesiologia.tsx:316[39m
+[90m      src/pages/Kinesiologia.tsx:320[39m
 [90m      src/pages/Home.tsx:154[39m
 [90m      src/pages/Home.tsx:157[39m
 [90m      src/pages/Home.tsx:160[39m
@@ -156,29 +171,6 @@ react-doctor v0.1.6
 [90m      src/pages/Home.tsx:351[39m
 [90m      src/pages/Home.tsx:351[39m
 [90m      src/pages/Home.tsx:351[39m
-[90m      src/components/WhatsAppChooser.tsx:137[39m
-[90m      src/components/WhatsAppChooser.tsx:146[39m
-[90m      src/components/WhatsAppChooser.tsx:155[39m
-[90m      src/components/WhatsAppChooser.tsx:162[39m
-[90m      src/components/WhatsAppChooser.tsx:162[39m
-[90m      src/components/Navbar.tsx:63[39m
-[90m      src/components/Navbar.tsx:96[39m
-[90m      src/components/Navbar.tsx:119[39m
-[90m      src/components/Navbar.tsx:135[39m
-[90m      src/components/Navbar.tsx:159[39m
-[90m      src/components/Navbar.tsx:159[39m
-[90m      src/components/Navbar.tsx:179[39m
-[90m      src/components/Navbar.tsx:199[39m
-[90m      src/components/Navbar.tsx:200[39m
-[90m      src/components/Footer.tsx:20[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:116[39m
-[90m      src/components/Footer.tsx:116[39m
-[90m      src/components/Footer.tsx:125[39m
-[90m      src/components/Footer.tsx:125[39m
-[90m      src/components/BackToTop.tsx:30[39m
-[90m      src/components/BackToTop.tsx:30[39m
 [90m      src/pages/Faq.tsx:118[39m
 [90m      src/pages/Faq.tsx:132[39m
 [90m      src/pages/Faq.tsx:142[39m
@@ -221,26 +213,29 @@ react-doctor v0.1.6
 [90m      src/pages/Contacto.tsx:327[39m
 [90m      src/pages/Contacto.tsx:333[39m
 [90m      src/pages/Contacto.tsx:337[39m
-[90m      src/pages/Consultorios.tsx:165[39m
-[90m      src/pages/Consultorios.tsx:165[39m
-[90m      src/pages/Consultorios.tsx:171[39m
-[90m      src/pages/Consultorios.tsx:174[39m
-[90m      src/pages/Consultorios.tsx:183[39m
-[90m      src/pages/Consultorios.tsx:183[39m
-[90m      src/pages/Consultorios.tsx:189[39m
-[90m      src/pages/Consultorios.tsx:192[39m
-[90m      src/pages/Consultorios.tsx:220[39m
-[90m      src/pages/Consultorios.tsx:224[39m
-[90m      src/pages/Consultorios.tsx:233[39m
-[90m      src/pages/Consultorios.tsx:234[39m
-[90m      src/pages/Consultorios.tsx:235[39m
-[90m      src/pages/Coberturas.tsx:84[39m
-[90m      src/pages/Coberturas.tsx:87[39m
-[90m      src/pages/Coberturas.tsx:90[39m
-[90m      src/pages/Coberturas.tsx:105[39m
-[90m      src/pages/Coberturas.tsx:111[39m
-[90m      src/pages/Coberturas.tsx:135[39m
-[90m      src/pages/Coberturas.tsx:138[39m
+[90m      src/components/WhatsAppChooser.tsx:137[39m
+[90m      src/components/WhatsAppChooser.tsx:146[39m
+[90m      src/components/WhatsAppChooser.tsx:155[39m
+[90m      src/components/WhatsAppChooser.tsx:162[39m
+[90m      src/components/WhatsAppChooser.tsx:162[39m
+[90m      src/components/Footer.tsx:20[39m
+[90m      src/components/Footer.tsx:109[39m
+[90m      src/components/Footer.tsx:109[39m
+[90m      src/components/Footer.tsx:116[39m
+[90m      src/components/Footer.tsx:116[39m
+[90m      src/components/Footer.tsx:125[39m
+[90m      src/components/Footer.tsx:125[39m
+[90m      src/components/BackToTop.tsx:30[39m
+[90m      src/components/BackToTop.tsx:30[39m
+[90m      src/components/Navbar.tsx:63[39m
+[90m      src/components/Navbar.tsx:96[39m
+[90m      src/components/Navbar.tsx:119[39m
+[90m      src/components/Navbar.tsx:135[39m
+[90m      src/components/Navbar.tsx:159[39m
+[90m      src/components/Navbar.tsx:159[39m
+[90m      src/components/Navbar.tsx:179[39m
+[90m      src/components/Navbar.tsx:199[39m
+[90m      src/components/Navbar.tsx:200[39m
 
   [33mÔÜá[39m [33mreact-doctor/design-no-bold-heading            [39m [90m├ù43[39m
 [90m      font-bold on <h1> crushes counter shapes at display sizes ÔÇö use font-semibold (600) or font-medium (500)[39m
@@ -250,11 +245,17 @@ react-doctor v0.1.6
 [90m      src/pages/Servicios.tsx:127[39m
 [90m      src/pages/Servicios.tsx:196[39m
 [90m      src/pages/Servicios.tsx:219[39m
-[90m      src/pages/Prestadores.tsx:170[39m
-[90m      src/pages/Prestadores.tsx:216[39m
-[90m      src/pages/Prestadores.tsx:266[39m
-[90m      src/pages/Prestadores.tsx:312[39m
-[90m      src/pages/Prestadores.tsx:360[39m
+[90m      src/pages/prestadores/ServiciosSection.tsx:20[39m
+[90m      src/pages/prestadores/PrestadoresHero.tsx:36[39m
+[90m      src/pages/prestadores/PasosSection.tsx:9[39m
+[90m      src/pages/Consultorios.tsx:119[39m
+[90m      src/pages/Consultorios.tsx:189[39m
+[90m      src/pages/Consultorios.tsx:251[39m
+[90m      src/pages/Coberturas.tsx:67[39m
+[90m      src/pages/Coberturas.tsx:87[39m
+[90m      src/pages/Coberturas.tsx:135[39m
+[90m      src/pages/prestadores/ContratacionForm.tsx:65[39m
+[90m      src/pages/prestadores/BeneficiosSection.tsx:9[39m
 [90m      src/pages/NotFound.tsx:27[39m
 [90m      src/pages/Nosotros.tsx:76[39m
 [90m      src/pages/Nosotros.tsx:104[39m
@@ -262,10 +263,10 @@ react-doctor v0.1.6
 [90m      src/pages/Nosotros.tsx:170[39m
 [90m      src/pages/Nosotros.tsx:189[39m
 [90m      src/pages/Nosotros.tsx:228[39m
-[90m      src/pages/Kinesiologia.tsx:165[39m
-[90m      src/pages/Kinesiologia.tsx:214[39m
-[90m      src/pages/Kinesiologia.tsx:274[39m
-[90m      src/pages/Kinesiologia.tsx:335[39m
+[90m      src/pages/Kinesiologia.tsx:169[39m
+[90m      src/pages/Kinesiologia.tsx:218[39m
+[90m      src/pages/Kinesiologia.tsx:278[39m
+[90m      src/pages/Kinesiologia.tsx:339[39m
 [90m      src/pages/Home.tsx:110[39m
 [90m      src/pages/Home.tsx:157[39m
 [90m      src/pages/Home.tsx:196[39m
@@ -273,7 +274,6 @@ react-doctor v0.1.6
 [90m      src/pages/Home.tsx:263[39m
 [90m      src/pages/Home.tsx:295[39m
 [90m      src/pages/Home.tsx:334[39m
-[90m      src/components/WhatsAppChooser.tsx:103[39m
 [90m      src/pages/Faq.tsx:101[39m
 [90m      src/pages/Faq.tsx:185[39m
 [90m      src/pages/Equipos.tsx:125[39m
@@ -282,57 +282,18 @@ react-doctor v0.1.6
 [90m      src/pages/Equipos.tsx:234[39m
 [90m      src/pages/Contacto.tsx:126[39m
 [90m      src/pages/Contacto.tsx:156[39m
-[90m      src/pages/Consultorios.tsx:119[39m
-[90m      src/pages/Consultorios.tsx:189[39m
-[90m      src/pages/Consultorios.tsx:251[39m
-[90m      src/pages/Coberturas.tsx:67[39m
-[90m      src/pages/Coberturas.tsx:87[39m
-[90m      src/pages/Coberturas.tsx:135[39m
+[90m      src/components/WhatsAppChooser.tsx:103[39m
 
-  [33mÔÜá[39m [33mreact-doctor/design-no-redundant-size-axes     [39m [90m├ù30[39m
-[90m      w-1.5 h-1.5 ÔåÆ use the shorthand size-1.5 (Tailwind v3.4+)[39m
+  [33mÔÜá[39m [33mreact-doctor/design-no-redundant-size-axes[39m
+[90m      w-[500px] h-[500px] ÔåÆ use the shorthand size-[500px] (Tailwind v3.4+)[39m
 [90m      ÔåÆ Collapse `w-N h-N` to `size-N` (Tailwind v3.4+) when both axes match[39m
-[90m      src/pages/Sucursales.tsx:235[39m
-[90m      src/pages/Servicios.tsx:193[39m
-[90m      src/pages/Servicios.tsx:237[39m
-[90m      src/pages/Prestadores.tsx:161[39m
-[90m      src/pages/Prestadores.tsx:237[39m
-[90m      src/pages/Prestadores.tsx:357[39m
-[90m      src/pages/NotFound.tsx:24[39m
-[90m      src/pages/Nosotros.tsx:144[39m
-[90m      src/pages/Nosotros.tsx:167[39m
-[90m      src/pages/Nosotros.tsx:209[39m
-[90m      src/pages/Kinesiologia.tsx:203[39m
-[90m      src/pages/Kinesiologia.tsx:269[39m
-[90m      src/pages/Kinesiologia.tsx:270[39m
 [90m      src/pages/Home.tsx:102[39m
-[90m      src/pages/Home.tsx:103[39m
-[90m      src/pages/Home.tsx:179[39m
-[90m      src/components/WhatsAppChooser.tsx:99[39m
-[90m      src/components/WhatsAppButton.tsx:18[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:116[39m
-[90m      src/components/BackToTop.tsx:30[39m
-[90m      src/pages/Equipos.tsx:197[39m
-[90m      src/pages/Contacto.tsx:292[39m
-[90m      src/pages/Contacto.tsx:330[39m
-[90m      src/pages/Consultorios.tsx:111[39m
-[90m      src/pages/Consultorios.tsx:167[39m
-[90m      src/pages/Consultorios.tsx:184[39m
-[90m      src/pages/Consultorios.tsx:185[39m
-[90m      src/pages/Coberturas.tsx:59[39m
-[90m      src/pages/Coberturas.tsx:131[39m
 
-  [33mÔÜá[39m [33mreact-doctor/no-giant-component[39m
-[90m      Component "Prestadores" is 453 lines ÔÇö consider breaking it into smaller focused components[39m
-[90m      ÔåÆ Extract logical sections into focused components: `<UserHeader />`, `<UserActions />`, etc.[39m
-[90m      src/pages/Prestadores.tsx:98[39m
-
-  [32mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [32m96[39m [2m/ 100[22m [32mGreat[39m
-  [32mÔöé Ôùá Ôùá Ôöé[39m  [32mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2mÔûæÔûæ[22m
+  [32mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [32m98[39m [2m/ 100[22m [32mGreat[39m
+  [32mÔöé Ôùá Ôùá Ôöé[39m  [32mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2mÔûæ[22m
   [32mÔöé  Ôû¢  Ôöé[39m  React Doctor [2m(www.react.doctor)[22m
   [32mÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ[39m
 
-  [31m288 issues[39m [2macross 17/28 files  in 3.4s[22m
-[90m  Full diagnostics written to C:\Users\Admin\AppData\Local\Temp\react-doctor-2d443e67-f0db-4cc4-b5f7-b267fc0fbb9c[39m
+  [33m257 issues[39m [2macross 20/34 files  in 2.6s[22m
+[90m  Full diagnostics written to C:\Users\Admin\AppData\Local\Temp\react-doctor-2ace0630-8b63-4f7b-a46e-4e9d808801ba[39m
 

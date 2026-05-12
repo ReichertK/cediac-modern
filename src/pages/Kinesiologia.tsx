@@ -137,6 +137,10 @@ export default function Kinesiologia() {
     handler();
     emblaApi.on("select", handler);
     emblaApi.on("reInit", handler);
+    return () => {
+      emblaApi.off("select", handler);
+      emblaApi.off("reInit", handler);
+    };
   }, [emblaApi]);
 
   return (
@@ -200,7 +204,7 @@ export default function Kinesiologia() {
                 key={item}
                 className="flex items-center gap-2 text-sm font-medium text-gray-700"
               >
-                <span className="h-2 w-2 shrink-0 rounded-full bg-accent-400" />
+                <span className="size-2 shrink-0 rounded-full bg-accent-400" />
                 {item}
               </span>
             ))}
@@ -266,8 +270,8 @@ export default function Kinesiologia() {
       {/* Áreas de Tratamiento (Glassmorphism) */}
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-100 via-primary-50/30 to-gray-100 py-20 lg:py-28">
         {/* Subtle decorative blobs */}
-        <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-primary-200/20 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-accent-200/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 -top-32 size-96 rounded-full bg-primary-200/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 size-80 rounded-full bg-accent-200/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">

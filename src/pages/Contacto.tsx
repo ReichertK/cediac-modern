@@ -289,7 +289,7 @@ export default function Contacto() {
                 className="rounded-xl border border-green-200 bg-green-50/50 p-5 shadow-sm"
               >
                 <div className="mb-3 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#25D366] text-white">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#25D366] text-white">
                     <MessageCircle size={20} />
                   </div>
                   <h3 className="text-sm font-semibold text-gray-900">
@@ -327,7 +327,7 @@ export default function Contacto() {
                   className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
                 >
                   <div className="mb-2 flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                       <card.icon size={20} />
                     </div>
                     <h3 className="text-sm font-semibold text-gray-900">

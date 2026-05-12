@@ -21,7 +21,7 @@ export default function NotFound() {
         transition={{ duration: 0.5, ease: "easeOut" as const }}
         className="mx-auto max-w-lg text-center"
       >
-        <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-primary-50 text-primary-400">
+        <div className="mx-auto mb-6 flex size-24 items-center justify-center rounded-full bg-primary-50 text-primary-400">
           <SearchX size={48} aria-hidden="true" />
         </div>
         <h1 className="text-6xl font-extrabold text-primary-600">404</h1>
