@@ -18,10 +18,10 @@ interface Props {
  * El primer crumb (Inicio) se agrega automáticamente con ícono.
  */
 export default function Breadcrumb({ items, onDark = false, className = "" }: Props) {
-  const baseText = onDark ? "text-white/80" : "text-gray-500";
-  const activeText = onDark ? "text-white" : "text-gray-900";
+  const baseText = onDark ? "text-white/80" : "text-neutral-500";
+  const activeText = onDark ? "text-white" : "text-neutral-900";
   const linkHover = onDark ? "hover:text-white" : "hover:text-primary-600";
-  const separator = onDark ? "text-white/40" : "text-gray-300";
+  const separator = onDark ? "text-white/40" : "text-neutral-300";
 
   return (
     <nav

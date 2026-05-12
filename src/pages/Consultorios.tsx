@@ -116,7 +116,7 @@ export default function Consultorios() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Consultorios <span className="text-accent-300">Médicos</span>
           </m.h1>
@@ -162,16 +162,16 @@ export default function Consultorios() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
-                className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50 p-5"
+                className="flex items-start gap-3 rounded-xl border border-neutral-100 bg-neutral-50 p-5"
               >
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                   <b.icon size={20} />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900">
+                  <h3 className="text-sm font-semibold text-neutral-900">
                     {b.title}
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{b.desc}</p>
+                  <p className="mt-1 text-sm text-neutral-500">{b.desc}</p>
                 </div>
               </m.div>
             ))}
@@ -180,16 +180,16 @@ export default function Consultorios() {
       </section>
 
       {/* Grid Especialidades */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-100 via-primary-50/30 to-gray-100 py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-neutral-100 via-primary-50/30 to-neutral-100 py-20 lg:py-28">
         <div className="pointer-events-none absolute -left-32 -top-32 size-96 rounded-full bg-primary-200/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 bottom-0 size-80 rounded-full bg-accent-200/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Nuestras Especialidades
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Contamos con profesionales de distintas ramas de la medicina para
               acompañarte en el cuidado integral de tu salud.
             </p>
@@ -217,11 +217,11 @@ export default function Consultorios() {
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <div className="flex items-center gap-2">
                     <e.icon size={18} className="shrink-0 text-accent-500" />
-                    <h3 className="text-base font-semibold text-gray-900">
+                    <h3 className="text-base font-semibold text-neutral-900">
                       {e.title}
                     </h3>
                   </div>
-                  <p className="text-sm leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-neutral-600">
                     {e.description}
                   </p>
                 </div>
@@ -230,9 +230,9 @@ export default function Consultorios() {
           </div>
 
           {/* Nota sobre especialidades adicionales */}
-          <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-gray-200 bg-white/80 p-6 text-center shadow-sm backdrop-blur-md">
-            <p className="text-sm leading-relaxed text-gray-600">
-              También atendemos <span className="font-semibold text-gray-800">otras especialidades</span>.
+          <div className="mx-auto mt-12 max-w-3xl rounded-2xl border border-neutral-200 bg-white/80 p-6 text-center shadow-sm backdrop-blur-md">
+            <p className="text-sm leading-relaxed text-neutral-600">
+              También atendemos <span className="font-semibold text-neutral-800">otras especialidades</span>.
               Consultá disponibilidad y profesionales por WhatsApp.
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function Consultorios() {
         className="bg-gradient-to-r from-primary-700 to-primary-800 py-16 text-center text-white"
       >
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-2xl font-bold sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             Reservá tu turno en consultorios
           </h2>
           <p className="mt-3 text-primary-100">

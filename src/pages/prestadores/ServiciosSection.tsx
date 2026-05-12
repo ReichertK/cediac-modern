@@ -4,7 +4,7 @@ import { servicios } from "./data";
 
 export default function ServiciosSection() {
   return (
-    <section className="bg-gray-50 py-20 lg:py-28">
+    <section className="bg-neutral-50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <m.div
@@ -17,10 +17,10 @@ export default function ServiciosSection() {
               <Building2 size={14} />
               Servicios prestados
             </span>
-            <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Una cartera completa de prestaciones
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Cubrimos los estudios y tratamientos más solicitados por las
               coberturas médicas, en dos sedes estratégicamente ubicadas en
               la Zona Sur del GBA.
@@ -29,7 +29,7 @@ export default function ServiciosSection() {
               {servicios.map((s) => (
                 <li
                   key={s}
-                  className="flex items-start gap-2 text-sm text-gray-700"
+                  className="flex items-start gap-2 text-sm text-neutral-700"
                 >
                   <CheckCircle2
                     size={18}

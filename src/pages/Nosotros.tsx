@@ -73,7 +73,7 @@ export default function Nosotros() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
           >
             Sobre <span className="text-accent-300">CEDIAC Group</span>
           </m.h1>
@@ -101,17 +101,17 @@ export default function Nosotros() {
             variants={fadeUp}
             className="mx-auto max-w-3xl text-center"
           >
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Nuestra Historia
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-gray-600">
+            <p className="mt-6 text-lg leading-relaxed text-neutral-600">
               CEDIAC viene poniendo a disposición de sus clientes no solo sus
               instalaciones, equipamientos, profesionales y servicios
               prestacionales, sino también su Know-How adquirido durante toda
               nuestra trayectoria en el Área de la Salud, como valor adicional
               de la empresa.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-gray-600">
+            <p className="mt-4 text-lg leading-relaxed text-neutral-600">
               Una empresa prestadora de servicios de imágenes de alta complejidad
               para la salud, en la Zona Sur del Gran Buenos Aires, que viene
               brindando sus atenciones hace varios años a obras sociales,
@@ -119,7 +119,7 @@ export default function Nosotros() {
               en una alternativa válida a la hora de atender a los afiliados y
               pacientes que cada institución requiera en la zona.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-gray-600">
+            <p className="mt-4 text-lg leading-relaxed text-neutral-600">
               Hoy operamos en dos sedes (Berazategui Calle 7 y Quilmes Humberto
               Primo 343), ofreciendo resonancia magnética, tomografía,
               mamografía, ecografía, radiología digital y un completo servicio
@@ -130,7 +130,7 @@ export default function Nosotros() {
       </section>
 
       {/* Misión y Visión */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2">
             <m.div
@@ -139,15 +139,15 @@ export default function Nosotros() {
               viewport={{ once: true, amount: 0.3 }}
               custom={0}
               variants={fadeUp}
-              className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10"
+              className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10"
             >
               <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                 <Target size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-semibold text-neutral-900">
                 Nuestra Misión
               </h3>
-              <p className="mt-4 leading-relaxed text-gray-600">
+              <p className="mt-4 leading-relaxed text-neutral-600">
                 Brindar un servicio de diagnóstico por imágenes y
                 rehabilitación kinesiológica de alta calidad, accesible y
                 humano, utilizando tecnología de vanguardia para contribuir a
@@ -162,15 +162,15 @@ export default function Nosotros() {
               viewport={{ once: true, amount: 0.3 }}
               custom={1}
               variants={fadeUp}
-              className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10"
+              className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10"
             >
               <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
                 <Eye size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">
+              <h3 className="text-2xl font-semibold text-neutral-900">
                 Nuestra Visión
               </h3>
-              <p className="mt-4 leading-relaxed text-gray-600">
+              <p className="mt-4 leading-relaxed text-neutral-600">
                 Ser el centro de referencia en diagnóstico por imágenes y
                 rehabilitación de la región, reconocido por la excelencia
                 técnica de nuestro equipo, la calidez en la atención y la
@@ -186,10 +186,10 @@ export default function Nosotros() {
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Nuestros Valores
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Los principios que guían cada decisión y cada interacción con
               nuestros pacientes.
             </p>
@@ -204,15 +204,15 @@ export default function Nosotros() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
-                className="group flex flex-col items-center rounded-xl border border-gray-200 bg-white p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                className="group flex flex-col items-center rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="mb-4 flex size-14 items-center justify-center rounded-xl bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                   <v.icon size={28} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                <h3 className="mb-2 text-lg font-semibold text-neutral-900">
                   {v.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-500">
+                <p className="text-sm leading-relaxed text-neutral-500">
                   {v.description}
                 </p>
               </m.div>
@@ -225,7 +225,7 @@ export default function Nosotros() {
       <section className="bg-primary-500 py-14 text-center text-white">
         <div className="mx-auto max-w-3xl px-4">
           <CalendarCheck size={40} className="mx-auto mb-4 text-white/80" />
-          <h2 className="text-2xl font-bold sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             Agendar un turno hoy mismo
           </h2>
           <p className="mt-3 text-primary-100">
@@ -234,7 +234,7 @@ export default function Nosotros() {
           </p>
           <Link
             to="/contacto"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-gray-100 transition-colors"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-neutral-100 transition-colors"
           >
             Contactar ahora
           </Link>

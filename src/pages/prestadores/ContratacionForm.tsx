@@ -62,10 +62,10 @@ export default function ContratacionForm() {
             <div className="mx-auto mb-3 flex size-12 items-center justify-center rounded-full bg-primary-50 text-primary-600">
               <Handshake size={24} />
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+            <h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
               Solicitar contratación
             </h2>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-neutral-500">
               Completá tus datos y nos contactamos con la propuesta
               comercial.
             </p>
@@ -76,7 +76,7 @@ export default function ContratacionForm() {
               <div>
                 <label
                   htmlFor="razon_social"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   Razón social *
                 </label>
@@ -85,14 +85,14 @@ export default function ContratacionForm() {
                   name="razon_social"
                   type="text"
                   required
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="Obra Social Ejemplo S.A."
                 />
               </div>
               <div>
                 <label
                   htmlFor="cuit"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   CUIT
                 </label>
@@ -101,7 +101,7 @@ export default function ContratacionForm() {
                   name="cuit"
                   type="text"
                   inputMode="numeric"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="30-12345678-9"
                 />
               </div>
@@ -111,7 +111,7 @@ export default function ContratacionForm() {
               <div>
                 <label
                   htmlFor="contacto_nombre"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   Nombre del contacto *
                 </label>
@@ -121,14 +121,14 @@ export default function ContratacionForm() {
                   type="text"
                   required
                   autoComplete="name"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="Juan Pérez"
                 />
               </div>
               <div>
                 <label
                   htmlFor="cargo"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   Cargo
                 </label>
@@ -136,7 +136,7 @@ export default function ContratacionForm() {
                   id="cargo"
                   name="cargo"
                   type="text"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="Gerente de Prestaciones"
                 />
               </div>
@@ -146,7 +146,7 @@ export default function ContratacionForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   Correo electrónico *
                 </label>
@@ -156,14 +156,14 @@ export default function ContratacionForm() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="contacto@obrasocial.com.ar"
                 />
               </div>
               <div>
                 <label
                   htmlFor="phone"
-                  className="mb-1.5 block text-sm font-medium text-gray-700"
+                  className="mb-1.5 block text-sm font-medium text-neutral-700"
                 >
                   Teléfono *
                 </label>
@@ -173,7 +173,7 @@ export default function ContratacionForm() {
                   type="tel"
                   required
                   autoComplete="tel"
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                  className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                   placeholder="011 1234-5678"
                 />
               </div>
@@ -182,7 +182,7 @@ export default function ContratacionForm() {
             <div>
               <label
                 htmlFor="afiliados"
-                className="mb-1.5 block text-sm font-medium text-gray-700"
+                className="mb-1.5 block text-sm font-medium text-neutral-700"
               >
                 Cantidad aproximada de afiliados
               </label>
@@ -190,7 +190,7 @@ export default function ContratacionForm() {
                 id="afiliados"
                 name="afiliados"
                 defaultValue=""
-                className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
               >
                 <option value="" disabled>
                   Seleccionar rango…
@@ -205,7 +205,7 @@ export default function ContratacionForm() {
             <div>
               <label
                 htmlFor="message"
-                className="mb-1.5 block text-sm font-medium text-gray-700"
+                className="mb-1.5 block text-sm font-medium text-neutral-700"
               >
                 Mensaje / prestaciones de interés *
               </label>
@@ -214,7 +214,7 @@ export default function ContratacionForm() {
                 name="message"
                 rows={5}
                 required
-                className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors resize-y"
+                className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors resize-y"
                 placeholder="Contanos qué prestaciones te interesan y cualquier requerimiento especial…"
               />
             </div>
@@ -229,7 +229,7 @@ export default function ContratacionForm() {
                 {sending ? "Enviando…" : "Enviar solicitud"}
               </button>
 
-              <span className="text-sm text-gray-500">o</span>
+              <span className="text-sm text-neutral-500">o</span>
 
               <WhatsAppCTA
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow hover:bg-green-700 transition-colors"

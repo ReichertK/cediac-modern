@@ -100,7 +100,7 @@ export default function WhatsAppChooser({
                   <MessageCircle size={22} className="fill-white" />
                 </div>
                 <div>
-                  <h2 id="wa-chooser-title" className="text-lg font-bold">
+                  <h2 id="wa-chooser-title" className="text-lg font-semibold">
                     {title}
                   </h2>
                   <p className="text-sm text-white/90">{subtitle}</p>
@@ -120,21 +120,21 @@ export default function WhatsAppChooser({
                     className={`group flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-200 ${
                       isPreferred
                         ? "border-primary-300 bg-primary-50/60 hover:border-primary-500 hover:bg-primary-50"
-                        : "border-gray-200 bg-white hover:border-primary-300 hover:bg-gray-50"
+                        : "border-neutral-200 bg-white hover:border-primary-300 hover:bg-neutral-50"
                     }`}
                   >
                     <div
                       className={`flex size-11 shrink-0 items-center justify-center rounded-full transition-colors ${
                         isPreferred
                           ? "bg-primary-500 text-white"
-                          : "bg-gray-100 text-gray-600 group-hover:bg-[#25D366] group-hover:text-white"
+                          : "bg-neutral-100 text-neutral-600 group-hover:bg-[#25D366] group-hover:text-white"
                       }`}
                     >
                       <MapPin size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="text-base font-semibold text-gray-900">
+                        <span className="text-base font-semibold text-neutral-900">
                           {b.name}
                         </span>
                         {isPreferred && (
@@ -143,7 +143,7 @@ export default function WhatsAppChooser({
                           </span>
                         )}
                       </div>
-                      <p className="truncate text-xs text-gray-500">
+                      <p className="truncate text-xs text-neutral-500">
                         {b.description}
                       </p>
                       <p className="mt-0.5 text-sm font-medium text-[#128C7E]">
@@ -152,14 +152,14 @@ export default function WhatsAppChooser({
                     </div>
                     <MessageCircle
                       size={18}
-                      className="shrink-0 text-gray-300 transition-colors group-hover:text-[#25D366]"
+                      className="shrink-0 text-neutral-300 transition-colors group-hover:text-[#25D366]"
                     />
                   </button>
                 );
               })}
             </div>
 
-            <p className="border-t border-gray-100 px-6 py-3 text-center text-xs text-gray-400">
+            <p className="border-t border-neutral-100 px-6 py-3 text-center text-xs text-neutral-400">
               Se abrirá WhatsApp en una pestaña nueva
             </p>
           </m.div>

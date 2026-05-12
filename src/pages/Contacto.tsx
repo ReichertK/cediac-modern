@@ -123,7 +123,7 @@ export default function Contacto() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Contacto y <span className="text-accent-300">Turnos</span>
           </m.h1>
@@ -140,7 +140,7 @@ export default function Contacto() {
       </section>
 
       {/* Body */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Form column (3/5) */}
@@ -152,8 +152,8 @@ export default function Contacto() {
               variants={fadeUp}
               className="lg:col-span-3"
             >
-              <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm lg:p-10">
-                <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              <div className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
+                <h2 className="mb-6 text-2xl font-semibold text-neutral-900">
                   Envianos tu consulta
                 </h2>
 
@@ -166,7 +166,7 @@ export default function Contacto() {
                     <div>
                       <label
                         htmlFor="name"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
+                        className="mb-1.5 block text-sm font-medium text-neutral-700"
                       >
                         Nombre completo
                       </label>
@@ -176,7 +176,7 @@ export default function Contacto() {
                         type="text"
                         required
                         autoComplete="name"
-                        className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                        className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                         placeholder="Juan Pérez"
                       />
                     </div>
@@ -186,7 +186,7 @@ export default function Contacto() {
                       <div>
                         <label
                           htmlFor="phone"
-                          className="mb-1.5 block text-sm font-medium text-gray-700"
+                          className="mb-1.5 block text-sm font-medium text-neutral-700"
                         >
                           Teléfono
                         </label>
@@ -196,14 +196,14 @@ export default function Contacto() {
                           type="tel"
                           required
                           autoComplete="tel"
-                          className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                          className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                           placeholder="011 1234-5678"
                         />
                       </div>
                       <div>
                         <label
                           htmlFor="email"
-                          className="mb-1.5 block text-sm font-medium text-gray-700"
+                          className="mb-1.5 block text-sm font-medium text-neutral-700"
                         >
                           Correo electrónico
                         </label>
@@ -213,7 +213,7 @@ export default function Contacto() {
                           type="email"
                           required
                           autoComplete="email"
-                          className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                          className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                           placeholder="juan@correo.com"
                         />
                       </div>
@@ -223,7 +223,7 @@ export default function Contacto() {
                     <div>
                       <label
                         htmlFor="subject"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
+                        className="mb-1.5 block text-sm font-medium text-neutral-700"
                       >
                         Motivo de consulta
                       </label>
@@ -232,7 +232,7 @@ export default function Contacto() {
                         name="subject"
                         required
                         defaultValue=""
-                        className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
+                        className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors"
                       >
                         {motivos.map((m) => (
                           <option
@@ -250,7 +250,7 @@ export default function Contacto() {
                     <div>
                       <label
                         htmlFor="message"
-                        className="mb-1.5 block text-sm font-medium text-gray-700"
+                        className="mb-1.5 block text-sm font-medium text-neutral-700"
                       >
                         Mensaje
                       </label>
@@ -259,7 +259,7 @@ export default function Contacto() {
                         name="message"
                         rows={5}
                         required
-                        className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors resize-y"
+                        className="w-full rounded-lg border border-neutral-300 px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-colors resize-y"
                         placeholder="Escribí tu consulta acá…"
                       />
                     </div>
@@ -292,14 +292,14 @@ export default function Contacto() {
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#25D366] text-white">
                     <MessageCircle size={20} />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900">
+                  <h3 className="text-sm font-semibold text-neutral-900">
                     WhatsApp
                   </h3>
                 </div>
-                <ul className="mb-3 space-y-1 pl-[52px] text-sm text-gray-600">
+                <ul className="mb-3 space-y-1 pl-[52px] text-sm text-neutral-600">
                   {WHATSAPP_BRANCHES.map((b) => (
                     <li key={b.key}>
-                      <span className="font-medium text-gray-800">{b.name}:</span>{" "}
+                      <span className="font-medium text-neutral-800">{b.name}:</span>{" "}
                       {b.display}
                     </li>
                   ))}
@@ -324,17 +324,17 @@ export default function Contacto() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={fadeUp}
-                  className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm"
+                  className="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm"
                 >
                   <div className="mb-2 flex items-center gap-3">
                     <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600">
                       <card.icon size={20} />
                     </div>
-                    <h3 className="text-sm font-semibold text-gray-900">
+                    <h3 className="text-sm font-semibold text-neutral-900">
                       {card.title}
                     </h3>
                   </div>
-                  <div className="space-y-1 pl-[52px] text-sm text-gray-600">
+                  <div className="space-y-1 pl-[52px] text-sm text-neutral-600">
                     {card.lines.map((line) => (
                       <p key={line}>
                         {card.href ? (

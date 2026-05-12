@@ -25,7 +25,7 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   `relative inline-flex items-center text-sm font-medium leading-none transition-colors duration-200 ${
     isActive
       ? "text-primary-600 after:absolute after:inset-x-0 after:-bottom-2 after:h-[2px] after:rounded-full after:bg-primary-500"
-      : "text-gray-700 hover:text-primary-500"
+      : "text-neutral-700 hover:text-primary-500"
   }`;
 
 export default function Navbar() {
@@ -60,7 +60,7 @@ export default function Navbar() {
   }, [moreOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200 shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2" aria-label="CEDIAC Group - Inicio">
@@ -93,7 +93,7 @@ export default function Navbar() {
               ref={moreButtonRef}
               type="button"
               onClick={() => setMoreOpen((v) => !v)}
-              className="inline-flex items-center gap-1 text-sm font-medium leading-none text-gray-700 hover:text-primary-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 rounded"
+              className="inline-flex items-center gap-1 text-sm font-medium leading-none text-neutral-700 hover:text-primary-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 focus-visible:ring-offset-2 rounded"
               aria-haspopup="menu"
               aria-expanded={moreOpen}
               aria-controls="nav-more-menu"
@@ -116,7 +116,7 @@ export default function Navbar() {
                   transition={{ duration: 0.18 }}
                   className="absolute right-0 top-full w-72 pt-3"
                 >
-                  <div className="rounded-xl border border-gray-200 bg-white p-2 shadow-xl">
+                  <div className="rounded-xl border border-neutral-200 bg-white p-2 shadow-xl">
                     {moreLinks.map((l) => (
                       <NavLink
                         key={l.to}
@@ -127,12 +127,12 @@ export default function Navbar() {
                           `block rounded-lg px-3 py-2.5 transition-colors ${
                             isActive
                               ? "bg-primary-50 text-primary-700"
-                              : "text-gray-700 hover:bg-gray-50"
+                              : "text-neutral-700 hover:bg-neutral-50"
                           }`
                         }
                       >
                         <div className="text-sm font-semibold">{l.label}</div>
-                        <div className="text-xs text-gray-500">{l.desc}</div>
+                        <div className="text-xs text-neutral-500">{l.desc}</div>
                       </NavLink>
                     ))}
                   </div>
@@ -156,7 +156,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="lg:hidden rounded-md p-2 text-gray-600 hover:bg-gray-100"
+            className="lg:hidden rounded-md p-2 text-neutral-600 hover:bg-neutral-100"
             onClick={() => setOpen(!open)}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
@@ -176,7 +176,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden lg:hidden border-t border-gray-200 bg-white"
+            className="overflow-hidden lg:hidden border-t border-neutral-200 bg-white"
           >
             <div className="flex flex-col gap-1 p-4">
               {primaryLinks.map((l) => (                <NavLink
@@ -188,7 +188,7 @@ export default function Navbar() {
                     `block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                       isActive
                         ? "bg-primary-50 text-primary-600"
-                        : "text-gray-700 hover:bg-gray-50"
+                        : "text-neutral-700 hover:bg-neutral-50"
                     }`
                   }
                 >
@@ -196,8 +196,8 @@ export default function Navbar() {
                 </NavLink>
               ))}
 
-              <div className="mt-2 border-t border-gray-100 pt-2">
-                <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+              <div className="mt-2 border-t border-neutral-100 pt-2">
+                <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-wider text-neutral-400">
                   Más
                 </p>
                 {moreLinks.map((l) => (
@@ -209,7 +209,7 @@ export default function Navbar() {
                       `block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                         isActive
                           ? "bg-primary-50 text-primary-600"
-                          : "text-gray-700 hover:bg-gray-50"
+                          : "text-neutral-700 hover:bg-neutral-50"
                       }`
                     }
                   >

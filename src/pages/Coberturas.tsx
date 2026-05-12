@@ -64,7 +64,7 @@ export default function Coberturas() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Obras Sociales y <span className="text-accent-300">Prepagas</span>
           </m.h1>
@@ -81,13 +81,13 @@ export default function Coberturas() {
       </section>
 
       {/* Grid de Coberturas */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Coberturas que aceptamos
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Atendemos pacientes de obras sociales, prepagas y particulares en
               ambas sedes.
             </p>
@@ -102,13 +102,13 @@ export default function Coberturas() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
                 variants={fadeUp}
-                className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white/70 px-5 py-4 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md"
+                className="group flex items-center gap-3 rounded-xl border border-neutral-200 bg-white/70 px-5 py-4 shadow-sm backdrop-blur-sm transition-shadow hover:shadow-md"
               >
                 <ShieldCheck
                   size={20}
                   className="shrink-0 text-primary-500 group-hover:text-accent-500 transition-colors"
                 />
-                <span className="text-base font-semibold text-gray-800">
+                <span className="text-base font-semibold text-neutral-800">
                   {name}
                 </span>
               </m.div>
@@ -132,10 +132,10 @@ export default function Coberturas() {
                 <AlertCircle size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="text-lg font-semibold text-neutral-900">
                   Información importante
                 </h3>
-                <p className="mt-2 leading-relaxed text-gray-600">
+                <p className="mt-2 leading-relaxed text-neutral-600">
                   Los planes y la cobertura pueden variar según el tipo de
                   estudio y la sede elegida. Te recomendamos consultar
                   previamente por WhatsApp o telefónicamente para confirmar la

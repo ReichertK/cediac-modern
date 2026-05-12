@@ -120,7 +120,7 @@ export default function Sucursales() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Nuestras <span className="text-accent-300">Sucursales</span>
           </m.h1>
@@ -137,7 +137,7 @@ export default function Sucursales() {
       </section>
 
       {/* Cards */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2">
             {sucursales.map((s, i) => (
@@ -148,10 +148,10 @@ export default function Sucursales() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={fadeUp}
-                className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
+                className="flex flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm"
               >
                 {/* Branch photo */}
-                <div className="relative h-48 w-full bg-gray-100">
+                <div className="relative h-48 w-full bg-neutral-100">
                   <img
                     src={s.image}
                     alt={s.imageAlt}
@@ -161,7 +161,7 @@ export default function Sucursales() {
                 </div>
 
                 {/* Map embed */}
-                <div className="relative h-56 w-full bg-gray-100">
+                <div className="relative h-56 w-full bg-neutral-100">
                   <iframe
                     title={`Mapa de la sucursal ${s.name}`}
                     src={s.mapSrc}
@@ -174,17 +174,17 @@ export default function Sucursales() {
 
                 {/* Content */}
                 <div className="flex flex-1 flex-col gap-5 p-6 lg:p-8">
-                  <h2 className="text-2xl font-bold text-primary-700">
+                  <h2 className="text-2xl font-semibold text-primary-700">
                     {s.name}
                   </h2>
 
                   {/* Description */}
-                  <p className="text-sm leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-neutral-600">
                     {s.description}
                   </p>
 
                   {/* Address */}
-                  <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <div className="flex items-start gap-3 text-sm text-neutral-600">
                     <MapPin
                       size={18}
                       className="mt-0.5 shrink-0 text-accent-500"
@@ -193,7 +193,7 @@ export default function Sucursales() {
                   </div>
 
                   {/* Hours */}
-                  <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <div className="flex items-start gap-3 text-sm text-neutral-600">
                     <Clock
                       size={18}
                       className="mt-0.5 shrink-0 text-accent-500"
@@ -205,7 +205,7 @@ export default function Sucursales() {
                   </div>
 
                   {/* Phones */}
-                  <div className="flex items-start gap-3 text-sm text-gray-600">
+                  <div className="flex items-start gap-3 text-sm text-neutral-600">
                     <Phone
                       size={18}
                       className="mt-0.5 shrink-0 text-accent-500"
@@ -225,11 +225,11 @@ export default function Sucursales() {
 
                   {/* Services list */}
                   <div>
-                    <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-gray-800">
+                    <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-neutral-800">
                       <Stethoscope size={16} className="text-accent-500" />
                       Prestaciones disponibles
                     </h3>
-                    <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-gray-600">
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-neutral-600">
                       {s.services.map((srv) => (
                         <li key={srv} className="flex items-center gap-1.5">
                           <span className="size-1.5 shrink-0 rounded-full bg-accent-400" />
@@ -266,7 +266,7 @@ export default function Sucursales() {
                       href={s.mapLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-50 transition-colors"
+                      className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm font-semibold text-neutral-700 shadow-sm hover:bg-neutral-50 transition-colors"
                     >
                       <Navigation size={16} />
                       Cómo llegar

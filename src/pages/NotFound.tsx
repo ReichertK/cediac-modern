@@ -14,7 +14,7 @@ export default function NotFound() {
   usePageTitle("Página no encontrada", "La URL solicitada no existe en CEDIAC Group. Volvé al inicio o revisá nuestras secciones principales.");
 
   return (
-    <section className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4 py-16">
+    <section className="flex min-h-[70vh] items-center justify-center bg-neutral-50 px-4 py-16">
       <m.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -24,11 +24,11 @@ export default function NotFound() {
         <div className="mx-auto mb-6 flex size-24 items-center justify-center rounded-full bg-primary-50 text-primary-400">
           <SearchX size={48} aria-hidden="true" />
         </div>
-        <h1 className="text-6xl font-extrabold text-primary-600">404</h1>
-        <p className="mt-4 text-xl font-semibold text-gray-800">
+        <h1 className="text-6xl font-semibold text-primary-600">404</h1>
+        <p className="mt-4 text-xl font-semibold text-neutral-800">
           Página no encontrada
         </p>
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 text-neutral-500">
           La dirección que ingresaste no existe o fue movida. Te dejamos algunos accesos directos:
         </p>
 
@@ -37,7 +37,7 @@ export default function NotFound() {
             <li key={to}>
               <Link
                 to={to}
-                className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary-600 hover:shadow-md"
+                className="flex items-center gap-2 rounded-lg border border-neutral-200 bg-white px-4 py-3 text-sm font-medium text-neutral-700 shadow-sm transition-all hover:border-primary-300 hover:text-primary-600 hover:shadow-md"
               >
                 <Icon size={16} className="text-primary-500" aria-hidden="true" />
                 {label}

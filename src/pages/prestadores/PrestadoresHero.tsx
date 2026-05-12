@@ -33,7 +33,7 @@ export default function PrestadoresHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl font-bold tracking-tight sm:text-5xl"
+          className="text-4xl font-semibold tracking-tight sm:text-5xl"
         >
           Prestación de Servicios para{" "}
           <span className="text-accent-300">Obras Sociales</span>

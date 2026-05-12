@@ -122,7 +122,7 @@ export default function Equipos() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Nuestra <span className="text-accent-300">Tecnología</span>
           </m.h1>
@@ -142,7 +142,7 @@ export default function Equipos() {
       </section>
 
       {/* Alternating Feature Sections */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex flex-col gap-20 lg:gap-28">
             {equipment.map((eq, i) => {
@@ -162,7 +162,7 @@ export default function Equipos() {
                 >
                   {/* Image placeholder */}
                   <div className="w-full lg:w-1/2">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
                       <img
                         src={eq.image}
                         alt={eq.alt}
@@ -177,14 +177,14 @@ export default function Equipos() {
                     <span className="mb-2 inline-block rounded-full bg-accent-100 px-3 py-1 text-xs font-semibold text-accent-700">
                       {eq.category}
                     </span>
-                    <h2 className="mt-1 text-2xl font-bold text-gray-900 sm:text-3xl">
+                    <h2 className="mt-1 text-2xl font-semibold text-neutral-900 sm:text-3xl">
                       {eq.name}
                     </h2>
                     <p className="mt-1 text-sm font-medium text-primary-600">
                       {eq.model}
                     </p>
 
-                    <p className="mt-4 leading-relaxed text-gray-600">
+                    <p className="mt-4 leading-relaxed text-neutral-600">
                       {eq.description}
                     </p>
 
@@ -192,7 +192,7 @@ export default function Equipos() {
                       {eq.features.map((feat) => (
                         <li
                           key={feat}
-                          className="flex items-start gap-2 text-sm text-gray-600"
+                          className="flex items-start gap-2 text-sm text-neutral-600"
                         >
                           <span className="mt-1.5 size-2 shrink-0 rounded-full bg-accent-400" />
                           {feat}
@@ -216,7 +216,7 @@ export default function Equipos() {
         className="bg-primary-700 py-14 text-center text-white"
       >
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-2xl font-bold sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             Tecnología al servicio de tu salud
           </h2>
           <p className="mt-3 text-primary-100">
@@ -231,7 +231,7 @@ export default function Equipos() {
       <section className="bg-primary-500 py-14 text-center text-white">
         <div className="mx-auto max-w-3xl px-4">
           <CalendarCheck size={40} className="mx-auto mb-4 text-white/80" />
-          <h2 className="text-2xl font-bold sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             ¿Necesitás realizarte un estudio?
           </h2>
           <p className="mt-3 text-primary-100">
@@ -240,7 +240,7 @@ export default function Equipos() {
           </p>
           <Link
             to="/contacto"
-            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-gray-100 transition-colors"
+            className="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-primary-600 shadow-md hover:bg-neutral-100 transition-colors"
           >
             Agendar un turno
           </Link>

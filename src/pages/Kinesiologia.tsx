@@ -166,7 +166,7 @@ export default function Kinesiologia() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+              className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl"
             >
               Rehabilitación integral y{" "}
               <span className="text-accent-300">
@@ -202,7 +202,7 @@ export default function Kinesiologia() {
             {instalaciones.map((item) => (
               <span
                 key={item}
-                className="flex items-center gap-2 text-sm font-medium text-gray-700"
+                className="flex items-center gap-2 text-sm font-medium text-neutral-700"
               >
                 <span className="size-2 shrink-0 rounded-full bg-accent-400" />
                 {item}
@@ -213,9 +213,9 @@ export default function Kinesiologia() {
       </section>
 
       {/* Carousel: Nuestras Instalaciones */}
-      <section className="bg-gray-100 py-20 lg:py-28">
+      <section className="bg-neutral-100 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <h2 className="mb-10 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mb-10 text-center text-3xl font-semibold text-neutral-900 sm:text-4xl">
             Nuestras Instalaciones
           </h2>
 
@@ -253,7 +253,7 @@ export default function Kinesiologia() {
               className="absolute -left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2.5 shadow-lg backdrop-blur-sm transition-opacity hover:bg-white disabled:opacity-30"
               aria-label="Anterior"
             >
-              <ChevronLeft size={20} className="text-gray-700" />
+              <ChevronLeft size={20} className="text-neutral-700" />
             </button>
             <button
               onClick={() => emblaApi?.scrollNext()}
@@ -261,24 +261,24 @@ export default function Kinesiologia() {
               className="absolute -right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-2.5 shadow-lg backdrop-blur-sm transition-opacity hover:bg-white disabled:opacity-30"
               aria-label="Siguiente"
             >
-              <ChevronRight size={20} className="text-gray-700" />
+              <ChevronRight size={20} className="text-neutral-700" />
             </button>
           </div>
         </div>
       </section>
 
       {/* Áreas de Tratamiento (Glassmorphism) */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-100 via-primary-50/30 to-gray-100 py-20 lg:py-28">
+      <section className="relative overflow-hidden bg-gradient-to-br from-neutral-100 via-primary-50/30 to-neutral-100 py-20 lg:py-28">
         {/* Subtle decorative blobs */}
         <div className="pointer-events-none absolute -left-32 -top-32 size-96 rounded-full bg-primary-200/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 bottom-0 size-80 rounded-full bg-accent-200/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Áreas de Tratamiento
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Abordamos cada patología con un enfoque interdisciplinario,
               combinando distintas técnicas para lograr la mejor evolución
               posible.
@@ -313,11 +313,11 @@ export default function Kinesiologia() {
                       size={18}
                       className="shrink-0 text-accent-500"
                     />
-                    <h3 className="text-base font-semibold text-gray-900">
+                    <h3 className="text-base font-semibold text-neutral-900">
                       {area.title}
                     </h3>
                   </div>
-                  <p className="text-sm leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-neutral-600">
                     {area.description}
                   </p>
                 </div>
@@ -336,7 +336,7 @@ export default function Kinesiologia() {
         className="bg-gradient-to-r from-primary-700 to-primary-800 py-16 text-center text-white"
       >
         <div className="mx-auto max-w-3xl px-4">
-          <h2 className="text-2xl font-bold sm:text-3xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
             Comenzá tu recuperación hoy
           </h2>
           <p className="mt-3 text-primary-100">

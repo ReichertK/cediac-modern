@@ -124,7 +124,7 @@ export default function Servicios() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Nuestros <span className="text-accent-300">Servicios</span>
           </m.h1>
@@ -141,7 +141,7 @@ export default function Servicios() {
       </section>
 
       {/* Tabs + Content */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           {/* Tab bar */}
           <div className="mb-12 flex flex-wrap justify-center gap-2">
@@ -152,7 +152,7 @@ export default function Servicios() {
                 className={`inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
                   active === i
                     ? "bg-primary-600 text-white shadow-lg shadow-primary-600/25"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-primary-300 hover:text-primary-600"
+                    : "bg-white text-neutral-600 border border-neutral-200 hover:border-primary-300 hover:text-primary-600"
                 }`}
               >
                 <s.icon size={16} />
@@ -193,11 +193,11 @@ export default function Servicios() {
                   <div className="flex size-12 items-center justify-center rounded-xl bg-primary-50 text-primary-600">
                     <current.icon size={24} />
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+                  <h2 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
                     {current.title}
                   </h2>
                 </div>
-                <p className="text-base leading-relaxed text-gray-600">
+                <p className="text-base leading-relaxed text-neutral-600">
                   {current.description}
                 </p>
                 <Link
@@ -216,7 +216,7 @@ export default function Servicios() {
       {/* Grid overview */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <h2 className="mb-12 text-center text-3xl font-bold text-gray-900 sm:text-4xl">
+          <h2 className="mb-12 text-center text-3xl font-semibold text-neutral-900 sm:text-4xl">
             Todo en un solo lugar
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -232,15 +232,15 @@ export default function Servicios() {
                   setActive(i);
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className="group cursor-pointer rounded-2xl border border-gray-100 bg-gray-50 p-6 transition-all duration-300 hover:border-primary-200 hover:bg-white hover:shadow-lg"
+                className="group cursor-pointer rounded-2xl border border-neutral-100 bg-neutral-50 p-6 transition-all duration-300 hover:border-primary-200 hover:bg-white hover:shadow-lg"
               >
                 <div className="mb-4 inline-flex size-11 items-center justify-center rounded-lg bg-primary-100 text-primary-600 transition-colors group-hover:bg-primary-600 group-hover:text-white">
                   <s.icon size={22} />
                 </div>
-                <h3 className="mb-1 text-lg font-semibold text-gray-900">
+                <h3 className="mb-1 text-lg font-semibold text-neutral-900">
                   {s.title}
                 </h3>
-                <p className="text-sm text-gray-500">{s.subtitle}</p>
+                <p className="text-sm text-neutral-500">{s.subtitle}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-600 opacity-0 transition-opacity group-hover:opacity-100">
                   Ver detalle <ArrowRight size={14} />
                 </span>

@@ -98,7 +98,7 @@ export default function Faq() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold tracking-tight sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Preguntas <span className="text-accent-300">Frecuentes</span>
           </m.h1>
@@ -115,7 +115,7 @@ export default function Faq() {
       </section>
 
       {/* Accordion */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
           <div className="flex flex-col gap-3">
             {faqs.map((faq, i) => {
@@ -129,7 +129,7 @@ export default function Faq() {
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.15 }}
                   variants={fadeUp}
-                  className="rounded-xl border border-gray-200 bg-white shadow-sm"
+                  className="rounded-xl border border-neutral-200 bg-white shadow-sm"
                 >
                   <button
                     type="button"
@@ -139,13 +139,13 @@ export default function Faq() {
                     aria-controls={`faq-panel-${i}`}
                     id={`faq-trigger-${i}`}
                   >
-                    <span className="text-base font-semibold text-gray-900">
+                    <span className="text-base font-semibold text-neutral-900">
                       {faq.question}
                     </span>
                     <ChevronDown
                       size={20}
                       aria-hidden="true"
-                      className={`shrink-0 text-gray-400 transition-transform duration-300 ${
+                      className={`shrink-0 text-neutral-400 transition-transform duration-300 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -163,7 +163,7 @@ export default function Faq() {
                         exit="exit"
                         className="overflow-hidden"
                       >
-                        <div className="border-t border-gray-100 px-6 pb-5 pt-4 text-sm leading-relaxed text-gray-600">
+                        <div className="border-t border-neutral-100 px-6 pb-5 pt-4 text-sm leading-relaxed text-neutral-600">
                           {faq.answer}
                         </div>
                       </m.div>
@@ -180,12 +180,12 @@ export default function Faq() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-14 rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm"
+            className="mt-14 rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-sm"
           >
-            <h3 className="text-xl font-bold text-gray-900">
+            <h3 className="text-xl font-semibold text-neutral-900">
               ¿No encontrás tu respuesta?
             </h3>
-            <p className="mt-2 text-sm text-gray-500">
+            <p className="mt-2 text-sm text-neutral-500">
               Comunicate con nosotros y te ayudamos con lo que necesites.
             </p>
             <WhatsAppCTA

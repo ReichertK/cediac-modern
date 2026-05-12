@@ -99,7 +99,7 @@ export default function Home() {
         </div>
 
         {/* Decorative circles */}
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-accent-500/10" />
+        <div className="pointer-events-none absolute -right-40 -top-40 size-[500px] rounded-full bg-accent-500/10" />
         <div className="pointer-events-none absolute -left-24 bottom-0 size-72 rounded-full bg-accent-400/10" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-24 text-center lg:py-36 lg:px-8">
@@ -107,7 +107,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+            className="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
           >
             Tu bienestar, <br className="hidden sm:block" />
             nuestro <span className="text-accent-300">objetivo</span>
@@ -151,13 +151,13 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Nuestros Servicios
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Una empresa prestadora de servicios de imágenes de alta
               complejidad para la salud, en la Zona Sur del Gran Buenos Aires,
               que atiende a obras sociales, prepagas, PAMI, clínicas y público
@@ -174,15 +174,15 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
-                className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="group rounded-xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary-50 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                   <s.icon size={24} />
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                <h3 className="mb-2 text-lg font-semibold text-neutral-900">
                   {s.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-500">{s.desc}</p>
+                <p className="text-sm leading-relaxed text-neutral-500">{s.desc}</p>
               </m.div>
             ))}
           </div>
@@ -193,10 +193,10 @@ export default function Home() {
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Nuestras Sucursales
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Visitanos en cualquiera de nuestras dos sedes, equipadas con
               tecnología de punta para tu comodidad.
             </p>
@@ -211,18 +211,18 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 variants={fadeUp}
-                className="rounded-xl border border-gray-200 bg-white p-8 shadow-sm"
+                className="rounded-xl border border-neutral-200 bg-white p-8 shadow-sm"
               >
-                <h3 className="mb-3 text-xl font-bold text-primary-700">
+                <h3 className="mb-3 text-xl font-semibold text-primary-700">
                   {b.name}
                 </h3>
-                <p className="mb-4 flex items-start gap-2 text-sm text-gray-600">
+                <p className="mb-4 flex items-start gap-2 text-sm text-neutral-600">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-accent-500" />
                   {b.address}
                 </p>
                 <ul className="mb-5 space-y-1">
                   {b.phones.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-gray-600">
+                    <li key={p} className="flex items-center gap-2 text-sm text-neutral-600">
                       <Phone size={14} className="text-primary-400" />
                       <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-primary-500 transition-colors">
                         {p}
@@ -244,7 +244,7 @@ export default function Home() {
                     href={`https://www.google.com/maps/search/${b.mapQuery}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50 transition-colors"
                   >
                     <MapPin size={14} />
                     Cómo llegar
@@ -257,13 +257,13 @@ export default function Home() {
       </section>
 
       {/* Consultorios + Prestadores */}
-      <section className="bg-gray-50 py-20 lg:py-28">
+      <section className="bg-neutral-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-semibold text-neutral-900 sm:text-4xl">
               Más servicios
             </h2>
-            <p className="mt-4 text-gray-500">
+            <p className="mt-4 text-neutral-500">
               Consultorios médicos en Quilmes y prestaciones para obras
               sociales.
             </p>
@@ -276,7 +276,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
-              className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+              className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
             >
               <div className="relative h-48 overflow-hidden bg-primary-100">
                 <img
@@ -292,10 +292,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6 lg:p-8">
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-semibold text-neutral-900">
                   Consultorios Médicos
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                   Cardiología, ginecología, clínica médica, traumatología y
                   más especialidades en la sede de Quilmes.
                 </p>
@@ -315,7 +315,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
+              className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition-shadow hover:shadow-lg"
             >
               <div className="relative h-48 overflow-hidden bg-primary-100">
                 <img
@@ -331,10 +331,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6 lg:p-8">
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-semibold text-neutral-900">
                   Prestación de Servicios
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                <p className="mt-2 text-sm leading-relaxed text-neutral-600">
                   Sumate como prestador: ofrecemos imágenes de alta complejidad
                   a obras sociales, prepagas y clínicas de la Zona Sur.
                 </p>
@@ -348,7 +348,7 @@ export default function Home() {
                   </Link>
                   <Link
                     to="/prestadores#contratacion"
-                    className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+                    className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-sm font-semibold text-neutral-700 hover:bg-neutral-50 transition-colors"
                   >
                     <MessageCircle size={14} />
                     Solicitar contratación
