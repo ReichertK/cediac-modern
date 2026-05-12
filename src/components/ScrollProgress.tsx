@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+import { m, useScroll, useSpring } from "framer-motion";
 
 /**
  * Barra delgada fija en el top que indica el progreso de scroll.
@@ -13,7 +13,7 @@ export default function ScrollProgress() {
   });
 
   return (
-    <motion.div
+    <m.div
       aria-hidden="true"
       style={{ scaleX }}
       className="fixed left-0 right-0 top-0 z-[60] h-0.5 origin-left bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600"

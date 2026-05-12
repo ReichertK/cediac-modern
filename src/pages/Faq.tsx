@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { ChevronDown, MessageCircle } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
 import Breadcrumb from "../components/Breadcrumb";
@@ -94,15 +94,15 @@ export default function Faq() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Preguntas frecuentes" }]} onDark className="mb-8 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Preguntas <span className="text-accent-300">Frecuentes</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -110,7 +110,7 @@ export default function Faq() {
           >
             Respondemos las dudas más comunes sobre nuestros servicios,
             turnos y estudios.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -122,7 +122,7 @@ export default function Faq() {
               const isOpen = openIndex === i;
 
               return (
-                <motion.div
+                <m.div
                   key={faq.question}
                   custom={i}
                   initial="hidden"
@@ -153,7 +153,7 @@ export default function Faq() {
 
                   <AnimatePresence initial={false}>
                     {isOpen && (
-                      <motion.div
+                      <m.div
                         id={`faq-panel-${i}`}
                         role="region"
                         aria-labelledby={`faq-trigger-${i}`}
@@ -166,16 +166,16 @@ export default function Faq() {
                         <div className="border-t border-gray-100 px-6 pb-5 pt-4 text-sm leading-relaxed text-gray-600">
                           {faq.answer}
                         </div>
-                      </motion.div>
+                      </m.div>
                     )}
                   </AnimatePresence>
-                </motion.div>
+                </m.div>
               );
             })}
           </div>
 
           {/* CTA */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -196,7 +196,7 @@ export default function Faq() {
               <MessageCircle size={18} />
               Escribinos por WhatsApp
             </WhatsAppCTA>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </>

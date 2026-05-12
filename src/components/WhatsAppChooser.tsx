@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { MessageCircle, X, MapPin } from "lucide-react";
 import { WHATSAPP_BRANCHES, waLink, type BranchKey } from "../lib/whatsapp";
 
@@ -35,10 +35,17 @@ export default function WhatsAppChooser({
     : WHATSAPP_BRANCHES;
 
   // Cierra con tecla Escape + bloquea scroll del body
+  // Guardamos `onClose` en una ref para que el efecto no se re-suscriba al
+  // listener cuando cambia la identidad del callback.
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  }, [onClose]);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") onCloseRef.current();
     };
     document.addEventListener("keydown", onKey);
     const prevOverflow = document.body.style.overflow;
@@ -47,7 +54,7 @@ export default function WhatsAppChooser({
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = prevOverflow;
     };
-  }, [open, onClose]);
+  }, [open]);
 
   function handlePick(number: string) {
     window.open(waLink(number, message), "_blank", "noopener,noreferrer");
@@ -59,7 +66,7 @@ export default function WhatsAppChooser({
   return createPortal(
     <AnimatePresence>
       {open && (
-        <motion.div
+        <m.div
           role="dialog"
           aria-modal="true"
           aria-labelledby="wa-chooser-title"
@@ -70,7 +77,7 @@ export default function WhatsAppChooser({
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
           onClick={onClose}
         >
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -155,8 +162,8 @@ export default function WhatsAppChooser({
             <p className="border-t border-gray-100 px-6 py-3 text-center text-xs text-gray-400">
               Se abrirá WhatsApp en una pestaña nueva
             </p>
-          </motion.div>
-        </motion.div>
+          </m.div>
+        </m.div>
       )}
     </AnimatePresence>,
     document.body,

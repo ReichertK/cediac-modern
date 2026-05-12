@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import type { FormEvent } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { toast } from "sonner";
 import {
   Phone,
@@ -119,15 +119,15 @@ export default function Contacto() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Contacto" }]} onDark className="mb-8 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Contacto y <span className="text-accent-300">Turnos</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -135,7 +135,7 @@ export default function Contacto() {
           >
             Escribinos y te respondemos a la brevedad, o comunicate
             directamente por teléfono o WhatsApp.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -144,7 +144,7 @@ export default function Contacto() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-5">
             {/* Form column (3/5) */}
-            <motion.div
+            <m.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -275,12 +275,12 @@ export default function Contacto() {
                     </button>
                   </form>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Info column (2/5) */}
             <div className="flex flex-col gap-4 lg:col-span-2">
               {/* Card especial: WhatsApp con selector de sucursal */}
-              <motion.div
+              <m.div
                 custom={0}
                 initial="hidden"
                 whileInView="visible"
@@ -314,10 +314,10 @@ export default function Contacto() {
                     Elegir sucursal
                   </WhatsAppCTA>
                 </div>
-              </motion.div>
+              </m.div>
 
               {contactCards.map((card, i) => (
-                <motion.div
+                <m.div
                   key={card.title}
                   custom={i}
                   initial="hidden"
@@ -354,7 +354,7 @@ export default function Contacto() {
                       </p>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

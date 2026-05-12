@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import WhatsAppCTA from "./WhatsAppCTA";
 
 const primaryLinks = [
@@ -107,7 +107,7 @@ export default function Navbar() {
             </button>
             <AnimatePresence>
               {moreOpen && (
-                <motion.div
+                <m.div
                   id="nav-more-menu"
                   role="menu"
                   initial={{ opacity: 0, y: 8 }}
@@ -136,7 +136,7 @@ export default function Navbar() {
                       </NavLink>
                     ))}
                   </div>
-                </motion.div>
+                </m.div>
               )}
             </AnimatePresence>
           </div>
@@ -170,7 +170,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id="mobile-menu"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -228,7 +228,7 @@ export default function Navbar() {
                 Solicitar turno por WhatsApp
               </WhatsAppCTA>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

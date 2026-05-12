@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { m, useScroll, useTransform } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Bone,
@@ -124,18 +124,26 @@ export default function Kinesiologia() {
     setCanNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
+  // Mantenemos la última referencia del handler para que el `useEffect` de
+  // suscripción no tenga que re-correr ante cambios de identidad.
+  const updateButtonsRef = useRef(updateButtons);
+  useEffect(() => {
+    updateButtonsRef.current = updateButtons;
+  }, [updateButtons]);
+
   useEffect(() => {
     if (!emblaApi) return;
-    updateButtons();
-    emblaApi.on("select", updateButtons);
-    emblaApi.on("reInit", updateButtons);
-  }, [emblaApi, updateButtons]);
+    const handler = () => updateButtonsRef.current();
+    handler();
+    emblaApi.on("select", handler);
+    emblaApi.on("reInit", handler);
+  }, [emblaApi]);
 
   return (
     <>
       {/* Hero with Parallax */}
       <section className="relative h-[75vh] min-h-[480px] overflow-hidden bg-primary-900 text-white">
-        <motion.div
+        <m.div
           style={{ y: heroY }}
           className="absolute inset-0 scale-110 bg-cover bg-center"
         >
@@ -145,12 +153,12 @@ export default function Kinesiologia() {
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-primary-900/60 via-primary-900/50 to-primary-900/80" />
-        </motion.div>
+        </m.div>
 
         <div className="relative flex h-full items-center justify-center">
           <div className="mx-auto max-w-4xl px-4 text-center">
             <Breadcrumb items={[{ label: "Kinesiología" }]} onDark className="mb-6 justify-center" />
-            <motion.h1
+            <m.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -160,8 +168,8 @@ export default function Kinesiologia() {
               <span className="text-accent-300">
                 recuperación de la movilidad
               </span>
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
@@ -171,7 +179,7 @@ export default function Kinesiologia() {
               ultrasonido terapéutico, láser, estimulación eléctrica nerviosa
               transcutánea, acupuntura láser, calor infrarrojo, crioterapia y
               aplicación de kinesiotaping.
-            </motion.p>
+            </m.p>
           </div>
         </div>
       </section>
@@ -179,7 +187,7 @@ export default function Kinesiologia() {
       {/* Instalaciones strip */}
       <section className="bg-white py-14">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <motion.div
+          <m.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -196,7 +204,7 @@ export default function Kinesiologia() {
                 {item}
               </span>
             ))}
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -275,7 +283,7 @@ export default function Kinesiologia() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {areas.map((area, i) => (
-              <motion.article
+              <m.article
                 key={area.title}
                 custom={i}
                 initial="hidden"
@@ -309,14 +317,14 @@ export default function Kinesiologia() {
                     {area.description}
                   </p>
                 </div>
-              </motion.article>
+              </m.article>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <motion.section
+      <m.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -343,7 +351,7 @@ export default function Kinesiologia() {
             Solicitar turno por WhatsApp
           </WhatsAppCTA>
         </div>
-      </motion.section>
+      </m.section>
     </>
   );
 }

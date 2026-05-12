@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import type { FormEvent } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { toast } from "sonner";
 import {
   Building2,
@@ -154,16 +154,16 @@ export default function Prestadores() {
           <div className="absolute inset-0 bg-primary-900/80" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
           >
             <Handshake size={28} className="text-accent-300" />
-          </motion.div>
+          </m.div>
           <Breadcrumb items={[{ label: "Prestadores y obras sociales" }]} onDark className="mb-6 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -171,8 +171,8 @@ export default function Prestadores() {
           >
             Prestación de Servicios para{" "}
             <span className="text-accent-300">Obras Sociales</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -181,8 +181,8 @@ export default function Prestadores() {
             Somos prestadores de servicios médicos, principalmente en
             diagnóstico por imágenes. Sumate como obra social o prepaga y
             ofrecé a tus afiliados la mejor tecnología de la Zona Sur.
-          </motion.p>
-          <motion.div
+          </m.p>
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -205,7 +205,7 @@ export default function Prestadores() {
               <MessageCircle size={16} />
               Consultar por WhatsApp
             </WhatsAppCTA>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -225,7 +225,7 @@ export default function Prestadores() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {beneficios.map((b, i) => (
-              <motion.div
+              <m.div
                 key={b.title}
                 custom={i}
                 initial="hidden"
@@ -243,7 +243,7 @@ export default function Prestadores() {
                 <p className="text-sm leading-relaxed text-gray-500">
                   {b.desc}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function Prestadores() {
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -285,9 +285,9 @@ export default function Prestadores() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -300,7 +300,7 @@ export default function Prestadores() {
                 className="h-[360px] w-full object-cover lg:h-[420px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -318,7 +318,7 @@ export default function Prestadores() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pasos.map((p, i) => (
-              <motion.div
+              <m.div
                 key={p.step}
                 custom={i}
                 initial="hidden"
@@ -334,7 +334,7 @@ export default function Prestadores() {
                   {p.title}
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">{p.desc}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function Prestadores() {
         className="bg-gradient-to-br from-primary-800 to-primary-900 py-20 lg:py-28"
       >
         <div className="mx-auto max-w-4xl px-4 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -542,7 +542,7 @@ export default function Prestadores() {
                 </WhatsAppCTA>
               </div>
             </form>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </>

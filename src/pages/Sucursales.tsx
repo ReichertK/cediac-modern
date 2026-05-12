@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   MapPin,
   Phone,
@@ -116,15 +116,15 @@ export default function Sucursales() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Sucursales" }]} onDark className="mb-8 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Nuestras <span className="text-accent-300">Sucursales</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -132,7 +132,7 @@ export default function Sucursales() {
           >
             Somos Cediac, una red de sucursales de imágenes y kinesiología
             dedicada a brindar atención de calidad a nuestros pacientes.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -141,7 +141,7 @@ export default function Sucursales() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-2">
             {sucursales.map((s, i) => (
-              <motion.article
+              <m.article
                 key={s.name}
                 custom={i}
                 initial="hidden"
@@ -273,7 +273,7 @@ export default function Sucursales() {
                     </a>
                   </div>
                 </div>
-              </motion.article>
+              </m.article>
             ))}
           </div>
         </div>

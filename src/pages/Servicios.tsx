@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import {
   Brain,
   ScanLine,
@@ -120,15 +120,15 @@ export default function Servicios() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Servicios" }]} onDark className="mb-8 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Nuestros <span className="text-accent-300">Servicios</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -136,7 +136,7 @@ export default function Servicios() {
           >
             Diagnóstico por imágenes y rehabilitación con tecnología de última
             generación, al servicio de tu salud.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -163,7 +163,7 @@ export default function Servicios() {
 
           {/* Active service detail */}
           <AnimatePresence mode="wait">
-            <motion.div
+            <m.div
               key={current.id}
               variants={tabContent}
               initial="initial"
@@ -208,7 +208,7 @@ export default function Servicios() {
                   <ArrowRight size={16} />
                 </Link>
               </div>
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </div>
       </section>
@@ -221,7 +221,7 @@ export default function Servicios() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <motion.div
+              <m.div
                 key={s.id}
                 custom={i}
                 initial="hidden"
@@ -244,7 +244,7 @@ export default function Servicios() {
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary-600 opacity-0 transition-opacity group-hover:opacity-100">
                   Ver detalle <ArrowRight size={14} />
                 </span>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

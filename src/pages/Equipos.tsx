@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
@@ -118,15 +118,15 @@ export default function Equipos() {
             onDark
             className="mb-8 justify-center"
           />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Nuestra <span className="text-accent-300">Tecnología</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -137,7 +137,7 @@ export default function Equipos() {
             pacientes los mejores servicios de imágenes y kinesiología,
             permitiéndonos realizar diagnósticos y tratamientos precisos y
             eficaces.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -149,7 +149,7 @@ export default function Equipos() {
               const isReversed = i % 2 !== 0;
 
               return (
-                <motion.article
+                <m.article
                   key={eq.name}
                   custom={i}
                   initial="hidden"
@@ -200,7 +200,7 @@ export default function Equipos() {
                       ))}
                     </ul>
                   </div>
-                </motion.article>
+                </m.article>
               );
             })}
           </div>
@@ -208,7 +208,7 @@ export default function Equipos() {
       </section>
 
       {/* Trust Banner */}
-      <motion.section
+      <m.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -225,7 +225,7 @@ export default function Equipos() {
             garantizar la máxima precisión diagnóstica.
           </p>
         </div>
-      </motion.section>
+      </m.section>
 
       {/* CTA Banner */}
       <section className="bg-primary-500 py-14 text-center text-white">

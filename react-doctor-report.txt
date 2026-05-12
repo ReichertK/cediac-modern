@@ -23,7 +23,7 @@ react-doctor v0.1.6
   [31mÔ£ù[39m [31mreact-doctor/effect-needs-cleanup[39m
 [90m      useEffect subscribes via `on(...)` but never returns a cleanup ÔÇö leaks the registration on every re-run and on unmount. Return a cleanup function that calls the matching remove/unsubscribe call[39m
 [90m      ÔåÆ Return a cleanup function that releases the subscription / timer: `return () => target.removeEventListener(name, handler)` for listeners, `return () => clearInterval(id)` / `clearTimeout(id)` for timers, or `return unsubscribe` if the subscribe call already returned one[39m
-[90m      src/pages/Kinesiologia.tsx:127[39m
+[90m      src/pages/Kinesiologia.tsx:134[39m
 
   [33mÔÜá[39m [33mreact-doctor/design-no-default-tailwind-palette[39m [90m├ù213[39m
 [90m      bg-gray-50 reads as the Tailwind template default ÔÇö use zinc (true neutral), neutral (warmer), or stone (warmest)[39m
@@ -119,17 +119,17 @@ react-doctor v0.1.6
 [90m      src/pages/Nosotros.tsx:212[39m
 [90m      src/pages/Nosotros.tsx:215[39m
 [90m      src/pages/Nosotros.tsx:237[39m
-[90m      src/pages/Kinesiologia.tsx:193[39m
-[90m      src/pages/Kinesiologia.tsx:204[39m
-[90m      src/pages/Kinesiologia.tsx:206[39m
-[90m      src/pages/Kinesiologia.tsx:244[39m
+[90m      src/pages/Kinesiologia.tsx:201[39m
+[90m      src/pages/Kinesiologia.tsx:212[39m
+[90m      src/pages/Kinesiologia.tsx:214[39m
 [90m      src/pages/Kinesiologia.tsx:252[39m
-[90m      src/pages/Kinesiologia.tsx:259[39m
-[90m      src/pages/Kinesiologia.tsx:259[39m
-[90m      src/pages/Kinesiologia.tsx:266[39m
-[90m      src/pages/Kinesiologia.tsx:269[39m
-[90m      src/pages/Kinesiologia.tsx:304[39m
-[90m      src/pages/Kinesiologia.tsx:308[39m
+[90m      src/pages/Kinesiologia.tsx:260[39m
+[90m      src/pages/Kinesiologia.tsx:267[39m
+[90m      src/pages/Kinesiologia.tsx:267[39m
+[90m      src/pages/Kinesiologia.tsx:274[39m
+[90m      src/pages/Kinesiologia.tsx:277[39m
+[90m      src/pages/Kinesiologia.tsx:312[39m
+[90m      src/pages/Kinesiologia.tsx:316[39m
 [90m      src/pages/Home.tsx:154[39m
 [90m      src/pages/Home.tsx:157[39m
 [90m      src/pages/Home.tsx:160[39m
@@ -156,6 +156,29 @@ react-doctor v0.1.6
 [90m      src/pages/Home.tsx:351[39m
 [90m      src/pages/Home.tsx:351[39m
 [90m      src/pages/Home.tsx:351[39m
+[90m      src/components/WhatsAppChooser.tsx:137[39m
+[90m      src/components/WhatsAppChooser.tsx:146[39m
+[90m      src/components/WhatsAppChooser.tsx:155[39m
+[90m      src/components/WhatsAppChooser.tsx:162[39m
+[90m      src/components/WhatsAppChooser.tsx:162[39m
+[90m      src/components/Navbar.tsx:63[39m
+[90m      src/components/Navbar.tsx:96[39m
+[90m      src/components/Navbar.tsx:119[39m
+[90m      src/components/Navbar.tsx:135[39m
+[90m      src/components/Navbar.tsx:159[39m
+[90m      src/components/Navbar.tsx:159[39m
+[90m      src/components/Navbar.tsx:179[39m
+[90m      src/components/Navbar.tsx:199[39m
+[90m      src/components/Navbar.tsx:200[39m
+[90m      src/components/Footer.tsx:20[39m
+[90m      src/components/Footer.tsx:109[39m
+[90m      src/components/Footer.tsx:109[39m
+[90m      src/components/Footer.tsx:116[39m
+[90m      src/components/Footer.tsx:116[39m
+[90m      src/components/Footer.tsx:125[39m
+[90m      src/components/Footer.tsx:125[39m
+[90m      src/components/BackToTop.tsx:30[39m
+[90m      src/components/BackToTop.tsx:30[39m
 [90m      src/pages/Faq.tsx:118[39m
 [90m      src/pages/Faq.tsx:132[39m
 [90m      src/pages/Faq.tsx:142[39m
@@ -218,29 +241,6 @@ react-doctor v0.1.6
 [90m      src/pages/Coberturas.tsx:111[39m
 [90m      src/pages/Coberturas.tsx:135[39m
 [90m      src/pages/Coberturas.tsx:138[39m
-[90m      src/components/WhatsAppChooser.tsx:130[39m
-[90m      src/components/WhatsAppChooser.tsx:139[39m
-[90m      src/components/WhatsAppChooser.tsx:148[39m
-[90m      src/components/WhatsAppChooser.tsx:155[39m
-[90m      src/components/WhatsAppChooser.tsx:155[39m
-[90m      src/components/BackToTop.tsx:30[39m
-[90m      src/components/BackToTop.tsx:30[39m
-[90m      src/components/Navbar.tsx:63[39m
-[90m      src/components/Navbar.tsx:96[39m
-[90m      src/components/Navbar.tsx:119[39m
-[90m      src/components/Navbar.tsx:135[39m
-[90m      src/components/Navbar.tsx:159[39m
-[90m      src/components/Navbar.tsx:159[39m
-[90m      src/components/Navbar.tsx:179[39m
-[90m      src/components/Navbar.tsx:199[39m
-[90m      src/components/Navbar.tsx:200[39m
-[90m      src/components/Footer.tsx:20[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:116[39m
-[90m      src/components/Footer.tsx:116[39m
-[90m      src/components/Footer.tsx:125[39m
-[90m      src/components/Footer.tsx:125[39m
 
   [33mÔÜá[39m [33mreact-doctor/design-no-bold-heading            [39m [90m├ù43[39m
 [90m      font-bold on <h1> crushes counter shapes at display sizes ÔÇö use font-semibold (600) or font-medium (500)[39m
@@ -262,10 +262,10 @@ react-doctor v0.1.6
 [90m      src/pages/Nosotros.tsx:170[39m
 [90m      src/pages/Nosotros.tsx:189[39m
 [90m      src/pages/Nosotros.tsx:228[39m
-[90m      src/pages/Kinesiologia.tsx:157[39m
-[90m      src/pages/Kinesiologia.tsx:206[39m
-[90m      src/pages/Kinesiologia.tsx:266[39m
-[90m      src/pages/Kinesiologia.tsx:327[39m
+[90m      src/pages/Kinesiologia.tsx:165[39m
+[90m      src/pages/Kinesiologia.tsx:214[39m
+[90m      src/pages/Kinesiologia.tsx:274[39m
+[90m      src/pages/Kinesiologia.tsx:335[39m
 [90m      src/pages/Home.tsx:110[39m
 [90m      src/pages/Home.tsx:157[39m
 [90m      src/pages/Home.tsx:196[39m
@@ -273,6 +273,7 @@ react-doctor v0.1.6
 [90m      src/pages/Home.tsx:263[39m
 [90m      src/pages/Home.tsx:295[39m
 [90m      src/pages/Home.tsx:334[39m
+[90m      src/components/WhatsAppChooser.tsx:103[39m
 [90m      src/pages/Faq.tsx:101[39m
 [90m      src/pages/Faq.tsx:185[39m
 [90m      src/pages/Equipos.tsx:125[39m
@@ -287,7 +288,6 @@ react-doctor v0.1.6
 [90m      src/pages/Coberturas.tsx:67[39m
 [90m      src/pages/Coberturas.tsx:87[39m
 [90m      src/pages/Coberturas.tsx:135[39m
-[90m      src/components/WhatsAppChooser.tsx:96[39m
 
   [33mÔÜá[39m [33mreact-doctor/design-no-redundant-size-axes     [39m [90m├ù30[39m
 [90m      w-1.5 h-1.5 ÔåÆ use the shorthand size-1.5 (Tailwind v3.4+)[39m
@@ -302,12 +302,17 @@ react-doctor v0.1.6
 [90m      src/pages/Nosotros.tsx:144[39m
 [90m      src/pages/Nosotros.tsx:167[39m
 [90m      src/pages/Nosotros.tsx:209[39m
-[90m      src/pages/Kinesiologia.tsx:195[39m
-[90m      src/pages/Kinesiologia.tsx:261[39m
-[90m      src/pages/Kinesiologia.tsx:262[39m
+[90m      src/pages/Kinesiologia.tsx:203[39m
+[90m      src/pages/Kinesiologia.tsx:269[39m
+[90m      src/pages/Kinesiologia.tsx:270[39m
 [90m      src/pages/Home.tsx:102[39m
 [90m      src/pages/Home.tsx:103[39m
 [90m      src/pages/Home.tsx:179[39m
+[90m      src/components/WhatsAppChooser.tsx:99[39m
+[90m      src/components/WhatsAppButton.tsx:18[39m
+[90m      src/components/Footer.tsx:109[39m
+[90m      src/components/Footer.tsx:116[39m
+[90m      src/components/BackToTop.tsx:30[39m
 [90m      src/pages/Equipos.tsx:197[39m
 [90m      src/pages/Contacto.tsx:292[39m
 [90m      src/pages/Contacto.tsx:330[39m
@@ -317,53 +322,17 @@ react-doctor v0.1.6
 [90m      src/pages/Consultorios.tsx:185[39m
 [90m      src/pages/Coberturas.tsx:59[39m
 [90m      src/pages/Coberturas.tsx:131[39m
-[90m      src/components/WhatsAppChooser.tsx:92[39m
-[90m      src/components/WhatsAppButton.tsx:18[39m
-[90m      src/components/BackToTop.tsx:30[39m
-[90m      src/components/Footer.tsx:109[39m
-[90m      src/components/Footer.tsx:116[39m
-
-  [33mÔÜá[39m [33mreact-doctor/use-lazy-motion                   [39m [90m├ù17[39m
-[90m      Import "m" with LazyMotion instead of "motion" ÔÇö saves ~30kb in bundle size[39m
-[90m      ÔåÆ Use `import { LazyMotion, m } from "framer-motion"` with `domAnimation` features ÔÇö saves ~30kb[39m
-[90m      src/pages/Sucursales.tsx:1[39m
-[90m      src/pages/Servicios.tsx:5[39m
-[90m      src/pages/Prestadores.tsx:3[39m
-[90m      src/pages/NotFound.tsx:2[39m
-[90m      src/pages/Nosotros.tsx:1[39m
-[90m      src/pages/Kinesiologia.tsx:2[39m
-[90m      src/pages/Home.tsx:1[39m
-[90m      src/pages/Faq.tsx:2[39m
-[90m      src/pages/Equipos.tsx:1[39m
-[90m      src/pages/Contacto.tsx:3[39m
-[90m      src/pages/Consultorios.tsx:1[39m
-[90m      src/pages/Coberturas.tsx:1[39m
-[90m      src/components/WhatsAppChooser.tsx:3[39m
-[90m      src/components/WhatsAppButton.tsx:2[39m
-[90m      src/components/ScrollProgress.tsx:1[39m
-[90m      src/components/BackToTop.tsx:2[39m
-[90m      src/components/Navbar.tsx:4[39m
 
   [33mÔÜá[39m [33mreact-doctor/no-giant-component[39m
 [90m      Component "Prestadores" is 453 lines ÔÇö consider breaking it into smaller focused components[39m
 [90m      ÔåÆ Extract logical sections into focused components: `<UserHeader />`, `<UserActions />`, etc.[39m
 [90m      src/pages/Prestadores.tsx:98[39m
 
-  [33mÔÜá[39m [33mreact-doctor/advanced-event-handler-refs[39m
-[90m      useEffect re-subscribes a "updateButtons" listener every time the handler identity changes ÔÇö store the handler in a ref and have the listener read `handlerRef.current()`, then drop it from the deps[39m
-[90m      ÔåÆ Store the handler in a ref and have the listener read `handlerRef.current()` ÔÇö the subscription stays put while the latest handler is always called[39m
-[90m      src/pages/Kinesiologia.tsx:127[39m
-
-  [33mÔÜá[39m [33mreact-doctor/prefer-use-effect-event[39m
-[90m      "onClose" is read only inside `addEventListener` ÔÇö wrap it with useEffectEvent and remove it from the dep array so the effect doesn't re-synchronize on every parent render[39m
-[90m      ÔåÆ Wrap the callback with `useEffectEvent(callback)` (React 19+) and call the resulting binding from inside the sub-handler. The Effect Event captures the latest props/state without being a reactive dep, so the effect doesn't re-subscribe on every parent render. See https://react.dev/reference/react/useEffectEvent[39m
-[90m      src/components/WhatsAppChooser.tsx:50[39m
-
-  [32mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [32m93[39m [2m/ 100[22m [32mGreat[39m
-  [32mÔöé Ôùá Ôùá Ôöé[39m  [32mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2mÔûæÔûæÔûæ[22m
+  [32mÔöîÔöÇÔöÇÔöÇÔöÇÔöÇÔöÉ[39m  [32m96[39m [2m/ 100[22m [32mGreat[39m
+  [32mÔöé Ôùá Ôùá Ôöé[39m  [32mÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê[39m[2mÔûæÔûæ[22m
   [32mÔöé  Ôû¢  Ôöé[39m  React Doctor [2m(www.react.doctor)[22m
   [32mÔööÔöÇÔöÇÔöÇÔöÇÔöÇÔöÿ[39m
 
-  [31m307 issues[39m [2macross 18/28 files  in 2.6s[22m
-[90m  Full diagnostics written to C:\Users\Admin\AppData\Local\Temp\react-doctor-0a640af1-b97b-4403-9b76-368614a55cab[39m
+  [31m288 issues[39m [2macross 17/28 files  in 3.4s[22m
+[90m  Full diagnostics written to C:\Users\Admin\AppData\Local\Temp\react-doctor-2d443e67-f0db-4cc4-b5f7-b267fc0fbb9c[39m
 

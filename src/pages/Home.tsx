@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   Phone,
@@ -103,7 +103,7 @@ export default function Home() {
         <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-accent-400/10" />
 
         <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-24 text-center lg:py-36 lg:px-8">
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -111,9 +111,9 @@ export default function Home() {
           >
             Tu bienestar, <br className="hidden sm:block" />
             nuestro <span className="text-accent-300">objetivo</span>
-          </motion.h1>
+          </m.h1>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -123,9 +123,9 @@ export default function Home() {
             necesitás para vivir una vida saludable y plena. Contamos con una
             acreditada nómina de profesionales que garantizan la correcta
             atención del paciente.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -146,7 +146,7 @@ export default function Home() {
               Nuestros Servicios
               <ArrowRight size={16} />
             </Link>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -167,7 +167,7 @@ export default function Home() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
-              <motion.div
+              <m.div
                 key={s.title}
                 custom={i}
                 initial="hidden"
@@ -183,7 +183,7 @@ export default function Home() {
                   {s.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-gray-500">{s.desc}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-2">
             {branches.map((b, i) => (
-              <motion.div
+              <m.div
                 key={b.name}
                 custom={i}
                 initial="hidden"
@@ -250,7 +250,7 @@ export default function Home() {
                     Cómo llegar
                   </a>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -271,7 +271,7 @@ export default function Home() {
 
           <div className="grid gap-8 lg:grid-cols-2">
             {/* Consultorios */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -307,10 +307,10 @@ export default function Home() {
                   <ArrowRight size={14} />
                 </Link>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* Prestadores */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
@@ -355,7 +355,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ShieldCheck, AlertCircle, MessageCircle } from "lucide-react";
 import WhatsAppCTA from "../components/WhatsAppCTA";
 import Breadcrumb from "../components/Breadcrumb";
@@ -52,23 +52,23 @@ export default function Coberturas() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Coberturas" }]} onDark className="mb-8 justify-center" />
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
           >
             <ShieldCheck size={28} className="text-accent-300" />
-          </motion.div>
-          <motion.h1
+          </m.div>
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Obras Sociales y <span className="text-accent-300">Prepagas</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -76,7 +76,7 @@ export default function Coberturas() {
           >
             Trabajamos con las principales coberturas médicas de la región para
             que puedas acceder a todos nuestros estudios y tratamientos.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
@@ -95,7 +95,7 @@ export default function Coberturas() {
 
           <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {coberturas.map((name, i) => (
-              <motion.div
+              <m.div
                 key={name}
                 custom={i}
                 initial="hidden"
@@ -111,7 +111,7 @@ export default function Coberturas() {
                 <span className="text-base font-semibold text-gray-800">
                   {name}
                 </span>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Coberturas() {
       {/* Callout */}
       <section className="bg-white py-16 lg:py-20">
         <div className="mx-auto max-w-3xl px-4 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -152,7 +152,7 @@ export default function Coberturas() {
                 </WhatsAppCTA>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </>

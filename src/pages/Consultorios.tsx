@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   Heart,
   Baby,
@@ -104,23 +104,23 @@ export default function Consultorios() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 text-center lg:px-8 lg:py-28">
           <Breadcrumb items={[{ label: "Consultorios médicos" }]} onDark className="mb-8 justify-center" />
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm"
           >
             <Stethoscope size={28} className="text-accent-300" />
-          </motion.div>
-          <motion.h1
+          </m.div>
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl"
           >
             Consultorios <span className="text-accent-300">Médicos</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -129,8 +129,8 @@ export default function Consultorios() {
             Sede Quilmes (Humberto Primo 343). Atención médica en múltiples
             especialidades, integrada con nuestro centro de diagnóstico por
             imágenes.
-          </motion.p>
-          <motion.div
+          </m.p>
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -146,7 +146,7 @@ export default function Consultorios() {
               <Phone size={16} />
               Solicitar turno
             </WhatsAppCTA>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -155,7 +155,7 @@ export default function Consultorios() {
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-6 sm:grid-cols-3">
             {beneficios.map((b, i) => (
-              <motion.div
+              <m.div
                 key={b.title}
                 custom={i}
                 initial="hidden"
@@ -173,7 +173,7 @@ export default function Consultorios() {
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{b.desc}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function Consultorios() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {especialidades.map((e, i) => (
-              <motion.article
+              <m.article
                 key={e.title}
                 custom={i}
                 initial="hidden"
@@ -225,7 +225,7 @@ export default function Consultorios() {
                     {e.description}
                   </p>
                 </div>
-              </motion.article>
+              </m.article>
             ))}
           </div>
 
@@ -240,7 +240,7 @@ export default function Consultorios() {
       </section>
 
       {/* CTA final */}
-      <motion.section
+      <m.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -266,7 +266,7 @@ export default function Consultorios() {
             Solicitar turno por WhatsApp
           </WhatsAppCTA>
         </div>
-      </motion.section>
+      </m.section>
     </>
   );
 }

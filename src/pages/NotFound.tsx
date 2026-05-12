@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { SearchX, Home, Stethoscope, MapPin, Phone } from "lucide-react";
 import { usePageTitle } from "../hooks/usePageTitle";
 
@@ -15,7 +15,7 @@ export default function NotFound() {
 
   return (
     <section className="flex min-h-[70vh] items-center justify-center bg-gray-50 px-4 py-16">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" as const }}
@@ -52,7 +52,7 @@ export default function NotFound() {
         >
           Volver al inicio
         </Link>
-      </motion.div>
+      </m.div>
     </section>
   );
 }

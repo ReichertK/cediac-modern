@@ -1,5 +1,5 @@
 import { MessageCircle } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useState } from "react";
 import WhatsAppChooser from "./WhatsAppChooser";
 
@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
 
   return (
     <>
-      <motion.button
+      <m.button
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Contactar por WhatsApp"
@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
       >
         <MessageCircle size={28} className="fill-white" />
         <span className="pointer-events-none absolute inset-0 animate-ping rounded-full bg-[#25D366]/40" />
-      </motion.button>
+      </m.button>
       <WhatsAppChooser open={open} onClose={() => setOpen(false)} />
     </>
   );

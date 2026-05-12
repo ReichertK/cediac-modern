@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Link } from "react-router-dom";
 import Breadcrumb from "../components/Breadcrumb";
 import { usePageTitle } from "../hooks/usePageTitle";
@@ -69,15 +69,15 @@ export default function Nosotros() {
 
         <div className="relative mx-auto max-w-7xl px-4 py-24 text-center lg:px-8 lg:py-36">
           <Breadcrumb items={[{ label: "Nosotros" }]} onDark className="mb-8 justify-center" />
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
           >
             Sobre <span className="text-accent-300">CEDIAC Group</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
@@ -86,14 +86,14 @@ export default function Nosotros() {
             Más de dos décadas acompañando la salud de la comunidad en la Zona
             Sur del Gran Buenos Aires. Una empresa prestadora de servicios de
             imágenes de alta complejidad y rehabilitación kinesiólogica.
-          </motion.p>
+          </m.p>
         </div>
       </section>
 
       {/* Historia breve */}
       <section className="bg-white py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <motion.div
+          <m.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -125,7 +125,7 @@ export default function Nosotros() {
               mamografía, ecografía, radiología digital y un completo servicio
               de kinesiología, todo bajo un mismo techo.
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
@@ -133,7 +133,7 @@ export default function Nosotros() {
       <section className="bg-gray-50 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2">
-            <motion.div
+            <m.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -154,9 +154,9 @@ export default function Nosotros() {
                 la detección temprana y el tratamiento oportuno de patologías
                 en la comunidad de la Zona Sur del Gran Buenos Aires.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -177,7 +177,7 @@ export default function Nosotros() {
                 incorporación permanente de innovaciones tecnológicas que
                 mejoren la experiencia y los resultados de cada paciente.
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -197,7 +197,7 @@ export default function Nosotros() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {valores.map((v, i) => (
-              <motion.div
+              <m.div
                 key={v.title}
                 custom={i}
                 initial="hidden"
@@ -215,7 +215,7 @@ export default function Nosotros() {
                 <p className="text-sm leading-relaxed text-gray-500">
                   {v.description}
                 </p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>

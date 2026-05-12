@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 
 /**
@@ -19,7 +19,7 @@ export default function BackToTop() {
   return (
     <AnimatePresence>
       {visible && (
-        <motion.button
+        <m.button
           type="button"
           aria-label="Volver al inicio de la página"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -30,7 +30,7 @@ export default function BackToTop() {
           className="fixed bottom-6 right-24 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white/90 text-gray-700 shadow-lg backdrop-blur-sm transition-colors hover:bg-white hover:text-primary-600"
         >
           <ArrowUp size={18} />
-        </motion.button>
+        </m.button>
       )}
     </AnimatePresence>
   );
